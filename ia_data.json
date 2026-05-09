@@ -1,0 +1,5280 @@
+{
+  "ia_types": [
+    "Primary fieldwork",
+    "Lab experiment",
+    "Survey",
+    "Secondary data"
+  ],
+  "independent_variables": [
+    {
+      "name": "Distance from road",
+      "topic": "Urban systems / air pollution",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "air pollution",
+        "noise",
+        "urban",
+        "biodiversity",
+        "soil",
+        "traffic",
+        "temperature",
+        "human disturbance"
+      ],
+      "default_range": [
+        "0 m",
+        "50 m",
+        "100 m",
+        "200 m",
+        "400 m"
+      ],
+      "notes": "Good for transects away from roads. Usually systematic sampling."
+    },
+    {
+      "name": "Distance from park entrance",
+      "topic": "Waste / human disturbance",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "waste",
+        "human disturbance",
+        "biodiversity",
+        "urban",
+        "litter",
+        "vegetation"
+      ],
+      "default_range": [
+        "0 m",
+        "25 m",
+        "50 m",
+        "100 m",
+        "200 m"
+      ],
+      "notes": "Good for litter, human disturbance, and vegetation patterns in parks."
+    },
+    {
+      "name": "Distance from water edge",
+      "topic": "Water / vegetation / soil",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "soil",
+        "biodiversity",
+        "vegetation",
+        "moisture",
+        "microclimate"
+      ],
+      "default_range": [
+        "0 m",
+        "5 m",
+        "10 m",
+        "20 m",
+        "50 m"
+      ],
+      "notes": "Good for soil moisture, vegetation cover, species richness, and microclimate."
+    },
+    {
+      "name": "Distance from footpath",
+      "topic": "Human disturbance / soil",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "human disturbance",
+        "biodiversity",
+        "soil",
+        "vegetation",
+        "compaction"
+      ],
+      "default_range": [
+        "0 m",
+        "1 m",
+        "3 m",
+        "5 m",
+        "10 m"
+      ],
+      "notes": "Good for studying trampling and human disturbance."
+    },
+    {
+      "name": "Distance from trash bin",
+      "topic": "Waste",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "waste",
+        "litter",
+        "human behavior",
+        "urban"
+      ],
+      "default_range": [
+        "0 m",
+        "5 m",
+        "10 m",
+        "20 m",
+        "50 m"
+      ],
+      "notes": "Good for testing whether bins reduce litter density nearby."
+    },
+    {
+      "name": "Distance downstream from discharge point",
+      "topic": "Water pollution",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water pollution",
+        "water",
+        "turbidity",
+        "nutrients",
+        "dissolved oxygen",
+        "eutrophication"
+      ],
+      "default_range": [
+        "0 m",
+        "50 m",
+        "100 m",
+        "250 m",
+        "500 m"
+      ],
+      "notes": "Only use if the sampling site is safe and legal."
+    },
+    {
+      "name": "Surface type",
+      "topic": "Urban systems / soil",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "urban",
+        "runoff",
+        "soil",
+        "temperature",
+        "water",
+        "infiltration",
+        "surface",
+        "microclimate"
+      ],
+      "default_range": [
+        "grass",
+        "bare soil",
+        "concrete",
+        "asphalt",
+        "permeable pavement"
+      ],
+      "notes": "Good for urban heat and runoff/infiltration studies."
+    },
+    {
+      "name": "Land-use type",
+      "topic": "Urban systems / land use",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Secondary data"
+      ],
+      "tags": [
+        "urban",
+        "water pollution",
+        "air pollution",
+        "biodiversity",
+        "soil",
+        "temperature",
+        "land use",
+        "secondary data",
+        "green space"
+      ],
+      "default_range": [
+        "residential",
+        "commercial",
+        "industrial",
+        "park/green space",
+        "agricultural"
+      ],
+      "notes": "Broad but flexible. Needs clear site selection."
+    },
+    {
+      "name": "Habitat type",
+      "topic": "Biodiversity / conservation",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "vegetation",
+        "conservation",
+        "species richness",
+        "habitat",
+        "invasive species"
+      ],
+      "default_range": [
+        "woodland",
+        "grassland",
+        "wetland",
+        "pond edge",
+        "urban park"
+      ],
+      "notes": "Good for biodiversity and species richness."
+    },
+    {
+      "name": "Management type",
+      "topic": "Conservation / management",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Secondary data"
+      ],
+      "tags": [
+        "conservation",
+        "biodiversity",
+        "vegetation",
+        "waste",
+        "restoration",
+        "management",
+        "protected areas"
+      ],
+      "default_range": [
+        "mowed",
+        "unmowed",
+        "planted",
+        "naturalized",
+        "restored"
+      ],
+      "notes": "Good for comparing management strategies."
+    },
+    {
+      "name": "Shading type",
+      "topic": "Microclimate",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "temperature",
+        "microclimate",
+        "vegetation",
+        "urban",
+        "soil moisture",
+        "shading"
+      ],
+      "default_range": [
+        "full sun",
+        "partial shade",
+        "full shade",
+        "tree shade",
+        "building shade"
+      ],
+      "notes": "Good for microclimate and urban heat studies."
+    },
+    {
+      "name": "Traffic intensity zone",
+      "topic": "Urban systems / air pollution",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "air pollution",
+        "noise",
+        "traffic",
+        "urban",
+        "human disturbance"
+      ],
+      "default_range": [
+        "high traffic",
+        "medium traffic",
+        "low traffic",
+        "pedestrian area",
+        "park comparison"
+      ],
+      "notes": "Good when exact road distance is hard to measure."
+    },
+    {
+      "name": "Time of day",
+      "topic": "Time / urban systems",
+      "category": "Time",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "air pollution",
+        "noise",
+        "temperature",
+        "microclimate",
+        "traffic",
+        "human behavior"
+      ],
+      "default_range": [
+        "7:00",
+        "10:00",
+        "13:00",
+        "16:00",
+        "19:00"
+      ],
+      "notes": "Good for time-based changes, but weather and daily variation need control."
+    },
+    {
+      "name": "Weekday vs weekend",
+      "topic": "Time / human activity",
+      "category": "Time",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Survey",
+        "Secondary data"
+      ],
+      "tags": [
+        "air pollution",
+        "noise",
+        "traffic",
+        "waste",
+        "human behavior",
+        "urban",
+        "survey"
+      ],
+      "default_range": [
+        "weekday",
+        "weekend"
+      ],
+      "notes": "Needs enough repeats because only two categories is weak by itself."
+    },
+    {
+      "name": "Before vs after rainfall",
+      "topic": "Water / runoff",
+      "category": "Time",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "water pollution",
+        "turbidity",
+        "soil moisture",
+        "runoff",
+        "litter"
+      ],
+      "default_range": [
+        "before rain",
+        "immediately after",
+        "1 day after",
+        "3 days after",
+        "5 days after"
+      ],
+      "notes": "Good but weather-dependent and harder to schedule."
+    },
+    {
+      "name": "Nitrate concentration",
+      "topic": "Lab / eutrophication",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "eutrophication",
+        "nutrients",
+        "water",
+        "plant growth",
+        "algae",
+        "duckweed"
+      ],
+      "default_range": [
+        "0 mg/L",
+        "5 mg/L",
+        "10 mg/L",
+        "20 mg/L",
+        "40 mg/L"
+      ],
+      "notes": "Good for duckweed/algae growth experiments."
+    },
+    {
+      "name": "Phosphate concentration",
+      "topic": "Lab / eutrophication",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "eutrophication",
+        "nutrients",
+        "water",
+        "plant growth",
+        "algae",
+        "duckweed"
+      ],
+      "default_range": [
+        "0 mg/L",
+        "1 mg/L",
+        "2 mg/L",
+        "5 mg/L",
+        "10 mg/L"
+      ],
+      "notes": "Good for eutrophication-style lab investigations."
+    },
+    {
+      "name": "Salt concentration",
+      "topic": "Lab / salinity",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "salinity",
+        "soil",
+        "water",
+        "plant growth",
+        "germination"
+      ],
+      "default_range": [
+        "0%",
+        "0.5%",
+        "1%",
+        "2%",
+        "4%"
+      ],
+      "notes": "Good for plant germination or growth under salinity stress."
+    },
+    {
+      "name": "pH level",
+      "topic": "Lab / acidification",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "acidification",
+        "water",
+        "soil",
+        "plant growth",
+        "germination",
+        "pH"
+      ],
+      "default_range": [
+        "pH 4",
+        "pH 5",
+        "pH 6",
+        "pH 7",
+        "pH 8"
+      ],
+      "notes": "Good for acidification simulations."
+    },
+    {
+      "name": "Fertilizer concentration",
+      "topic": "Lab / agriculture",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "agriculture",
+        "nutrients",
+        "plant growth",
+        "germination",
+        "eutrophication"
+      ],
+      "default_range": [
+        "0%",
+        "25%",
+        "50%",
+        "75%",
+        "100% recommended dose"
+      ],
+      "notes": "Good for plant growth, but runoff/eutrophication link should be clear."
+    },
+    {
+      "name": "Compost percentage",
+      "topic": "Lab / soil",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "agriculture",
+        "plant growth",
+        "germination",
+        "water retention",
+        "compost"
+      ],
+      "default_range": [
+        "0%",
+        "10%",
+        "20%",
+        "40%",
+        "60%"
+      ],
+      "notes": "Good for soil quality and plant growth."
+    },
+    {
+      "name": "Biochar percentage",
+      "topic": "Lab / soil",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "agriculture",
+        "plant growth",
+        "water retention",
+        "sustainability",
+        "biochar"
+      ],
+      "default_range": [
+        "0%",
+        "5%",
+        "10%",
+        "20%",
+        "30%"
+      ],
+      "notes": "Good for soil water retention or plant growth."
+    },
+    {
+      "name": "Light intensity",
+      "topic": "Lab / plants",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment",
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "plant growth",
+        "microclimate",
+        "temperature",
+        "vegetation",
+        "light"
+      ],
+      "default_range": [
+        "very low",
+        "low",
+        "medium",
+        "high",
+        "very high"
+      ],
+      "notes": "Can be lab or fieldwork depending on design."
+    },
+    {
+      "name": "Temperature",
+      "topic": "Lab / climate",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "plant growth",
+        "germination",
+        "decomposition",
+        "water",
+        "microclimate",
+        "temperature"
+      ],
+      "default_range": [
+        "10°C",
+        "15°C",
+        "20°C",
+        "25°C",
+        "30°C"
+      ],
+      "notes": "May be hard to control without incubators."
+    },
+    {
+      "name": "Mulch thickness",
+      "topic": "Lab / agriculture",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment",
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "soil",
+        "water retention",
+        "temperature",
+        "agriculture",
+        "plant growth",
+        "mulch"
+      ],
+      "default_range": [
+        "0 cm",
+        "1 cm",
+        "2 cm",
+        "4 cm",
+        "8 cm"
+      ],
+      "notes": "Good for soil moisture and temperature."
+    },
+    {
+      "name": "Age group",
+      "topic": "Survey / people",
+      "category": "Human group",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "human behavior",
+        "attitudes",
+        "knowledge",
+        "policy",
+        "waste",
+        "conservation",
+        "recycling"
+      ],
+      "default_range": [
+        "12–15",
+        "16–18",
+        "19–30",
+        "31–50",
+        "51+"
+      ],
+      "notes": "Use carefully and avoid overgeneralizing from small samples."
+    },
+    {
+      "name": "Grade level",
+      "topic": "Survey / school",
+      "category": "Human group",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "knowledge",
+        "attitudes",
+        "human behavior",
+        "waste",
+        "conservation",
+        "education"
+      ],
+      "default_range": [
+        "Grade 9",
+        "Grade 10",
+        "DP1",
+        "DP2"
+      ],
+      "notes": "Useful in school-based surveys."
+    },
+    {
+      "name": "Frequency of recycling",
+      "topic": "Survey / waste",
+      "category": "Human group",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "waste",
+        "human behavior",
+        "attitudes",
+        "recycling"
+      ],
+      "default_range": [
+        "never",
+        "rarely",
+        "sometimes",
+        "often",
+        "always"
+      ],
+      "notes": "Can be IV or DV depending on survey design."
+    },
+    {
+      "name": "Transport mode",
+      "topic": "Survey / transport",
+      "category": "Human group",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "transport",
+        "air pollution",
+        "carbon",
+        "human behavior"
+      ],
+      "default_range": [
+        "walking",
+        "bike",
+        "bus",
+        "car",
+        "metro"
+      ],
+      "notes": "Useful for behavior and carbon footprint-style surveys."
+    },
+    {
+      "name": "GDP per capita",
+      "topic": "Secondary data / development",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "development",
+        "carbon",
+        "energy",
+        "waste",
+        "water",
+        "forest",
+        "sustainability"
+      ],
+      "default_range": [
+        "country-level data"
+      ],
+      "notes": "Useful for cross-country secondary data investigations."
+    },
+    {
+      "name": "Urbanization rate",
+      "topic": "Secondary data / urban systems",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "urban",
+        "carbon",
+        "waste",
+        "air pollution",
+        "green space"
+      ],
+      "default_range": [
+        "country-level or city-level data"
+      ],
+      "notes": "Good for secondary data, but needs reliable sources."
+    },
+    {
+      "name": "Forest cover percentage",
+      "topic": "Secondary data / forests",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "forest",
+        "biodiversity",
+        "carbon",
+        "conservation"
+      ],
+      "default_range": [
+        "country-level or regional data"
+      ],
+      "notes": "Good for deforestation/conservation topics."
+    },
+    {
+      "name": "Protected area coverage",
+      "topic": "Secondary data / conservation",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "conservation",
+        "biodiversity",
+        "protected areas"
+      ],
+      "default_range": [
+        "country-level or regional data"
+      ],
+      "notes": "Good for conservation-focused secondary data."
+    },
+    {
+      "name": "Year",
+      "topic": "Secondary data / time trend",
+      "category": "Secondary data / time",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "trend",
+        "carbon",
+        "forest",
+        "waste",
+        "energy",
+        "air pollution"
+      ],
+      "default_range": [
+        "2000",
+        "2005",
+        "2010",
+        "2015",
+        "2020"
+      ],
+      "notes": "Good for time-series secondary data."
+    },
+    {
+      "name": "Distance from major intersection",
+      "topic": "Urban systems / air pollution",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "air pollution",
+        "traffic",
+        "urban",
+        "noise",
+        "human disturbance"
+      ],
+      "default_range": [
+        "0 m",
+        "25 m",
+        "50 m",
+        "100 m",
+        "200 m"
+      ],
+      "notes": "Good for traffic-related air pollution and noise studies near junctions."
+    },
+    {
+      "name": "Road type",
+      "topic": "Urban systems / transport",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "air pollution",
+        "traffic",
+        "noise",
+        "urban",
+        "human disturbance"
+      ],
+      "default_range": [
+        "main road",
+        "side road",
+        "school road",
+        "pedestrian street",
+        "park road"
+      ],
+      "notes": "Useful when road distance is difficult to standardize."
+    },
+    {
+      "name": "Presence of roadside vegetation",
+      "topic": "Urban systems / air pollution",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "air pollution",
+        "vegetation",
+        "urban",
+        "traffic",
+        "biodiversity",
+        "temperature",
+        "green space"
+      ],
+      "default_range": [
+        "no vegetation",
+        "grass only",
+        "sparse trees",
+        "medium tree cover",
+        "dense tree cover"
+      ],
+      "notes": "Good for testing whether vegetation changes air quality, temperature, or noise."
+    },
+    {
+      "name": "Indoor vs outdoor location",
+      "topic": "Urban systems / air quality",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "air pollution",
+        "carbon dioxide",
+        "indoor air",
+        "urban",
+        "microclimate",
+        "temperature"
+      ],
+      "default_range": [
+        "classroom",
+        "corridor",
+        "canteen",
+        "outdoor courtyard",
+        "roadside"
+      ],
+      "notes": "Works best with CO₂, PM2.5, temperature, or humidity."
+    },
+    {
+      "name": "Ventilation condition",
+      "topic": "Urban systems / indoor air quality",
+      "category": "Category / treatment",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "air pollution",
+        "carbon dioxide",
+        "indoor air",
+        "human behavior",
+        "temperature"
+      ],
+      "default_range": [
+        "windows closed",
+        "windows open",
+        "door open",
+        "fan on",
+        "air purifier on"
+      ],
+      "notes": "Good for classroom CO₂ or indoor PM investigations. Keep occupancy similar."
+    },
+    {
+      "name": "Distance from storm drain",
+      "topic": "Water pollution / runoff",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "water pollution",
+        "runoff",
+        "turbidity",
+        "nutrients",
+        "litter",
+        "urban"
+      ],
+      "default_range": [
+        "0 m",
+        "10 m",
+        "25 m",
+        "50 m",
+        "100 m"
+      ],
+      "notes": "Good for testing runoff effects after rainfall, if sampling is safe and legal."
+    },
+    {
+      "name": "Surrounding land use near water body",
+      "topic": "Water pollution / land use",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Secondary data"
+      ],
+      "tags": [
+        "water",
+        "water pollution",
+        "land use",
+        "urban",
+        "agriculture",
+        "nutrients",
+        "litter"
+      ],
+      "default_range": [
+        "residential",
+        "commercial",
+        "park/green space",
+        "agricultural",
+        "industrial"
+      ],
+      "notes": "Good for comparing water quality between sites with different land uses."
+    },
+    {
+      "name": "Water body type",
+      "topic": "Water quality",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "water pollution",
+        "biodiversity",
+        "turbidity",
+        "dissolved oxygen",
+        "habitat"
+      ],
+      "default_range": [
+        "pond",
+        "canal",
+        "river",
+        "lake",
+        "drainage ditch"
+      ],
+      "notes": "Useful, but students should avoid comparing sites that differ in too many uncontrolled ways."
+    },
+    {
+      "name": "Shading over water",
+      "topic": "Water quality / microclimate",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "temperature",
+        "light",
+        "microclimate",
+        "dissolved oxygen",
+        "algae"
+      ],
+      "default_range": [
+        "full sun",
+        "partial shade",
+        "full shade",
+        "tree shade",
+        "building shade"
+      ],
+      "notes": "Good for water temperature, DO, algae, or light penetration."
+    },
+    {
+      "name": "Flow rate category",
+      "topic": "Water quality",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "dissolved oxygen",
+        "turbidity",
+        "water pollution",
+        "habitat"
+      ],
+      "default_range": [
+        "still",
+        "very slow",
+        "slow",
+        "medium",
+        "fast"
+      ],
+      "notes": "Works better if students can measure or clearly define flow categories."
+    },
+    {
+      "name": "Park management intensity",
+      "topic": "Biodiversity / conservation",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "conservation",
+        "vegetation",
+        "management",
+        "human disturbance",
+        "green space"
+      ],
+      "default_range": [
+        "heavily managed",
+        "moderately managed",
+        "lightly managed",
+        "naturalized",
+        "unmanaged"
+      ],
+      "notes": "Good for comparing vegetation, species richness, and habitat quality."
+    },
+    {
+      "name": "Mowing frequency",
+      "topic": "Biodiversity / vegetation management",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Secondary data"
+      ],
+      "tags": [
+        "biodiversity",
+        "vegetation",
+        "management",
+        "conservation",
+        "habitat",
+        "pollinators"
+      ],
+      "default_range": [
+        "weekly",
+        "monthly",
+        "rarely",
+        "seasonally",
+        "never"
+      ],
+      "notes": "Good for grassland/park biodiversity or pollinator studies."
+    },
+    {
+      "name": "Flower abundance category",
+      "topic": "Biodiversity / pollinators",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "vegetation",
+        "pollinators",
+        "habitat",
+        "conservation"
+      ],
+      "default_range": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "very high"
+      ],
+      "notes": "Good for pollinator visit frequency or invertebrate abundance."
+    },
+    {
+      "name": "Native vs ornamental planting",
+      "topic": "Biodiversity / conservation",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "vegetation",
+        "conservation",
+        "habitat",
+        "invasive species",
+        "pollinators"
+      ],
+      "default_range": [
+        "mostly native",
+        "mixed native/ornamental",
+        "mostly ornamental",
+        "lawn",
+        "bare/low vegetation"
+      ],
+      "notes": "Good if students can identify or classify planting types reliably."
+    },
+    {
+      "name": "Distance from human disturbance source",
+      "topic": "Human disturbance / biodiversity",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "human disturbance",
+        "biodiversity",
+        "vegetation",
+        "soil",
+        "litter",
+        "habitat"
+      ],
+      "default_range": [
+        "0 m",
+        "5 m",
+        "10 m",
+        "20 m",
+        "50 m"
+      ],
+      "notes": "Use for benches, playgrounds, entrances, paths, or gathering areas."
+    },
+    {
+      "name": "Soil depth",
+      "topic": "Soil quality",
+      "category": "Depth / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "nutrients",
+        "moisture",
+        "pH",
+        "soil health"
+      ],
+      "default_range": [
+        "0–5 cm",
+        "5–10 cm",
+        "10–15 cm",
+        "15–20 cm",
+        "20–25 cm"
+      ],
+      "notes": "Good for comparing soil moisture, pH, nutrients, or organic matter by depth."
+    },
+    {
+      "name": "Distance from tree trunk",
+      "topic": "Soil quality / vegetation",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "soil",
+        "vegetation",
+        "moisture",
+        "pH",
+        "microclimate",
+        "shading",
+        "biodiversity"
+      ],
+      "default_range": [
+        "0.5 m",
+        "1 m",
+        "2 m",
+        "4 m",
+        "8 m"
+      ],
+      "notes": "Good for soil moisture, pH, temperature, leaf litter, or vegetation cover."
+    },
+    {
+      "name": "Soil type",
+      "topic": "Soil quality / agriculture",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "water retention",
+        "infiltration",
+        "plant growth",
+        "agriculture",
+        "germination"
+      ],
+      "default_range": [
+        "sand",
+        "loam",
+        "clay",
+        "compost-rich soil",
+        "garden soil"
+      ],
+      "notes": "Good for water-holding capacity, infiltration, or plant growth."
+    },
+    {
+      "name": "Irrigation frequency",
+      "topic": "Lab / agriculture",
+      "category": "Treatment / frequency",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "water",
+        "plant growth",
+        "germination",
+        "agriculture",
+        "soil moisture"
+      ],
+      "default_range": [
+        "never",
+        "once per week",
+        "twice per week",
+        "every other day",
+        "daily"
+      ],
+      "notes": "Good for plant growth or seedling survival experiments."
+    },
+    {
+      "name": "Organic fertilizer amount",
+      "topic": "Lab / agriculture",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "agriculture",
+        "nutrients",
+        "plant growth",
+        "germination",
+        "soil",
+        "compost"
+      ],
+      "default_range": [
+        "0 g",
+        "5 g",
+        "10 g",
+        "20 g",
+        "40 g"
+      ],
+      "notes": "Good for testing plant growth while linking to sustainable agriculture."
+    },
+    {
+      "name": "Soil compaction treatment",
+      "topic": "Lab / soil",
+      "category": "Treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "compaction",
+        "infiltration",
+        "plant growth",
+        "water retention"
+      ],
+      "default_range": [
+        "uncompacted",
+        "lightly compacted",
+        "moderately compacted",
+        "heavily compacted",
+        "very heavily compacted"
+      ],
+      "notes": "Good for infiltration rate, germination, or root length."
+    },
+    {
+      "name": "Distance from tree canopy edge",
+      "topic": "Microclimate / vegetation",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "microclimate",
+        "temperature",
+        "vegetation",
+        "shading",
+        "light",
+        "soil moisture"
+      ],
+      "default_range": [
+        "0 m",
+        "2 m",
+        "5 m",
+        "10 m",
+        "20 m"
+      ],
+      "notes": "Good for testing the cooling or shading effect of trees."
+    },
+    {
+      "name": "Percentage canopy cover",
+      "topic": "Microclimate / vegetation",
+      "category": "Category / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "microclimate",
+        "temperature",
+        "vegetation",
+        "shading",
+        "light",
+        "biodiversity"
+      ],
+      "default_range": [
+        "0%",
+        "25%",
+        "50%",
+        "75%",
+        "100%"
+      ],
+      "notes": "Good for temperature, humidity, light intensity, or soil moisture."
+    },
+    {
+      "name": "Building density",
+      "topic": "Urban systems / microclimate",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Secondary data"
+      ],
+      "tags": [
+        "urban",
+        "temperature",
+        "microclimate",
+        "land surface temperature",
+        "green space"
+      ],
+      "default_range": [
+        "very low",
+        "low",
+        "medium",
+        "high",
+        "very high"
+      ],
+      "notes": "Useful for urban heat island studies if categories are clearly defined."
+    },
+    {
+      "name": "Surface color",
+      "topic": "Microclimate / urban heat",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "temperature",
+        "microclimate",
+        "surface",
+        "urban",
+        "albedo",
+        "light"
+      ],
+      "default_range": [
+        "white/light",
+        "grey",
+        "red/brown",
+        "dark",
+        "black"
+      ],
+      "notes": "Good for surface temperature and albedo-style investigations."
+    },
+    {
+      "name": "Distance from building wall",
+      "topic": "Microclimate / urban systems",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "temperature",
+        "microclimate",
+        "urban",
+        "shading",
+        "surface",
+        "wind"
+      ],
+      "default_range": [
+        "0 m",
+        "1 m",
+        "3 m",
+        "5 m",
+        "10 m"
+      ],
+      "notes": "Good for wall heat, shade, or wind shelter effects."
+    },
+    {
+      "name": "Green space size",
+      "topic": "Secondary data / urban systems",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "urban",
+        "green space",
+        "temperature",
+        "biodiversity",
+        "microclimate"
+      ],
+      "default_range": [
+        "park area in hectares"
+      ],
+      "notes": "Good for city/park comparisons using GIS or online datasets."
+    },
+    {
+      "name": "Impervious surface percentage",
+      "topic": "Secondary data / urban systems",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "urban",
+        "runoff",
+        "temperature",
+        "surface",
+        "land use"
+      ],
+      "default_range": [
+        "% impervious cover"
+      ],
+      "notes": "Useful for runoff, urban heat, or green space investigations."
+    },
+    {
+      "name": "Distance from food vendor or cafeteria",
+      "topic": "Waste / human behavior",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "waste",
+        "litter",
+        "human behavior",
+        "urban",
+        "school"
+      ],
+      "default_range": [
+        "0 m",
+        "5 m",
+        "10 m",
+        "20 m",
+        "50 m"
+      ],
+      "notes": "Good for litter studies in school or public food areas."
+    },
+    {
+      "name": "Bin visibility",
+      "topic": "Waste / human behavior",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "waste",
+        "litter",
+        "human behavior",
+        "recycling",
+        "urban"
+      ],
+      "default_range": [
+        "not visible",
+        "partly visible",
+        "clearly visible",
+        "large visible bin",
+        "multiple visible bins"
+      ],
+      "notes": "Good for whether bin placement affects litter density."
+    },
+    {
+      "name": "Bin type",
+      "topic": "Waste / recycling",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "waste",
+        "recycling",
+        "litter",
+        "human behavior",
+        "plastic"
+      ],
+      "default_range": [
+        "general waste",
+        "recycling",
+        "food waste",
+        "mixed bins",
+        "no bin"
+      ],
+      "notes": "Good for recycling contamination or waste sorting studies."
+    },
+    {
+      "name": "Presence of waste-sorting signage",
+      "topic": "Waste / recycling",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Survey"
+      ],
+      "tags": [
+        "waste",
+        "recycling",
+        "human behavior",
+        "education",
+        "survey"
+      ],
+      "default_range": [
+        "no sign",
+        "small sign",
+        "large sign",
+        "bilingual sign",
+        "picture-based sign"
+      ],
+      "notes": "Good for sorting accuracy or recycling knowledge/behavior studies."
+    },
+    {
+      "name": "Time after lunch period",
+      "topic": "Waste / school",
+      "category": "Time",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "waste",
+        "litter",
+        "food waste",
+        "human behavior",
+        "school"
+      ],
+      "default_range": [
+        "before lunch",
+        "immediately after lunch",
+        "1 hour after",
+        "3 hours after",
+        "end of day"
+      ],
+      "notes": "Good for cafeteria or school litter studies."
+    },
+    {
+      "name": "Area type in school",
+      "topic": "Waste / school",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "waste",
+        "litter",
+        "human behavior",
+        "school",
+        "urban"
+      ],
+      "default_range": [
+        "classroom",
+        "hallway",
+        "cafeteria",
+        "sports field",
+        "school entrance"
+      ],
+      "notes": "Useful for school-based human impact investigations."
+    },
+    {
+      "name": "Household size",
+      "topic": "Survey / energy",
+      "category": "Human group",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "energy",
+        "carbon",
+        "human behavior",
+        "resource use"
+      ],
+      "default_range": [
+        "1 person",
+        "2 people",
+        "3 people",
+        "4 people",
+        "5+ people"
+      ],
+      "notes": "Useful for energy use, waste generation, or carbon footprint surveys."
+    },
+    {
+      "name": "Air conditioner use frequency",
+      "topic": "Survey / energy",
+      "category": "Human behavior",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "energy",
+        "carbon",
+        "human behavior",
+        "climate change"
+      ],
+      "default_range": [
+        "never",
+        "rarely",
+        "sometimes",
+        "often",
+        "always"
+      ],
+      "notes": "Good for energy behavior surveys in hot climates."
+    },
+    {
+      "name": "Transport distance to school",
+      "topic": "Survey / transport",
+      "category": "Distance / survey",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "transport",
+        "carbon",
+        "air pollution",
+        "human behavior"
+      ],
+      "default_range": [
+        "0–1 km",
+        "1–3 km",
+        "3–5 km",
+        "5–10 km",
+        "10+ km"
+      ],
+      "notes": "Good for school commute carbon footprint surveys."
+    },
+    {
+      "name": "Diet type",
+      "topic": "Survey / food systems",
+      "category": "Human group",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "food",
+        "carbon",
+        "sustainability",
+        "human behavior"
+      ],
+      "default_range": [
+        "omnivore",
+        "flexitarian",
+        "vegetarian",
+        "vegan",
+        "other/prefer not to say"
+      ],
+      "notes": "Use sensitively and avoid judging individual choices."
+    },
+    {
+      "name": "Food origin",
+      "topic": "Food systems / sustainability",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Survey",
+        "Secondary data"
+      ],
+      "tags": [
+        "food",
+        "carbon",
+        "sustainability",
+        "resource use",
+        "secondary data",
+        "survey"
+      ],
+      "default_range": [
+        "local",
+        "regional",
+        "national",
+        "imported",
+        "unknown/mixed"
+      ],
+      "notes": "Good for food miles or local food percentage studies."
+    },
+    {
+      "name": "Fertilizer type",
+      "topic": "Lab / agriculture",
+      "category": "Treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "agriculture",
+        "nutrients",
+        "plant growth",
+        "germination",
+        "soil",
+        "sustainability"
+      ],
+      "default_range": [
+        "none",
+        "compost",
+        "organic fertilizer",
+        "synthetic fertilizer",
+        "mixed fertilizer"
+      ],
+      "notes": "Good for comparing plant growth under different fertilizer types."
+    },
+    {
+      "name": "Watering amount",
+      "topic": "Lab / agriculture",
+      "category": "Treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "water",
+        "plant growth",
+        "germination",
+        "agriculture",
+        "soil moisture"
+      ],
+      "default_range": [
+        "0 mL/day",
+        "25 mL/day",
+        "50 mL/day",
+        "100 mL/day",
+        "150 mL/day"
+      ],
+      "notes": "Good for seedling survival, plant height, or biomass."
+    },
+    {
+      "name": "Crop type",
+      "topic": "Lab / agriculture",
+      "category": "Category / treatment",
+      "compatible_ia_types": [
+        "Lab experiment",
+        "Secondary data"
+      ],
+      "tags": [
+        "agriculture",
+        "plant growth",
+        "germination",
+        "food",
+        "sustainability"
+      ],
+      "default_range": [
+        "lettuce",
+        "radish",
+        "bean",
+        "wheat",
+        "rice"
+      ],
+      "notes": "Better for comparing responses to the same treatment than as a standalone IV."
+    },
+    {
+      "name": "Environmental club participation",
+      "topic": "Survey / environmental behavior",
+      "category": "Human group",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "attitudes",
+        "knowledge",
+        "human behavior",
+        "conservation",
+        "education"
+      ],
+      "default_range": [
+        "yes",
+        "no"
+      ],
+      "notes": "Needs a good sample size because it has only two groups."
+    },
+    {
+      "name": "Science course level",
+      "topic": "Survey / school",
+      "category": "Human group",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "knowledge",
+        "attitudes",
+        "education",
+        "conservation",
+        "climate change"
+      ],
+      "default_range": [
+        "no current science",
+        "general science",
+        "ESS",
+        "biology",
+        "chemistry"
+      ],
+      "notes": "Useful for environmental knowledge or attitudes in school."
+    },
+    {
+      "name": "Prior environmental education",
+      "topic": "Survey / school",
+      "category": "Human group",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "knowledge",
+        "attitudes",
+        "education",
+        "human behavior",
+        "sustainability"
+      ],
+      "default_range": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "very high"
+      ],
+      "notes": "Should be defined using clear survey questions, not guessed by the student."
+    },
+    {
+      "name": "Access to recycling facilities at home",
+      "topic": "Survey / waste",
+      "category": "Human group",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "waste",
+        "recycling",
+        "human behavior",
+        "sustainability"
+      ],
+      "default_range": [
+        "no access",
+        "limited access",
+        "moderate access",
+        "easy access",
+        "very easy access"
+      ],
+      "notes": "Good for recycling behavior or waste sorting knowledge studies."
+    },
+    {
+      "name": "Frequency of outdoor activity",
+      "topic": "Survey / people and environment",
+      "category": "Human behavior",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "human behavior",
+        "attitudes",
+        "conservation",
+        "green space"
+      ],
+      "default_range": [
+        "never",
+        "rarely",
+        "sometimes",
+        "often",
+        "daily"
+      ],
+      "notes": "Useful for green space attitudes or conservation concern surveys."
+    },
+	    {
+      "name": "Commute distance to school",
+      "topic": "Survey / transport",
+      "category": "Distance / survey",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "transport",
+        "carbon",
+        "air pollution",
+        "human behavior",
+        "school"
+      ],
+      "default_range": [
+        "0–1 km",
+        "1–3 km",
+        "3–5 km",
+        "5–10 km",
+        "10+ km"
+      ],
+      "notes": "Good for school transport, carbon footprint, or travel behavior surveys."
+    },
+    {
+      "name": "Commute time to school",
+      "topic": "Survey / transport",
+      "category": "Time / survey",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "transport",
+        "carbon",
+        "human behavior",
+        "school",
+        "urban"
+      ],
+      "default_range": [
+        "0–10 minutes",
+        "11–20 minutes",
+        "21–30 minutes",
+        "31–45 minutes",
+        "46+ minutes"
+      ],
+      "notes": "Useful when exact distance is hard for students to estimate."
+    },
+    {
+      "name": "Access to public transport",
+      "topic": "Survey / transport",
+      "category": "Access / survey",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "transport",
+        "carbon",
+        "urban",
+        "human behavior",
+        "sustainability"
+      ],
+      "default_range": [
+        "very poor access",
+        "poor access",
+        "moderate access",
+        "good access",
+        "very good access"
+      ],
+      "notes": "Good for investigating whether infrastructure affects sustainable transport choices."
+    },
+    {
+      "name": "Use of food delivery services",
+      "topic": "Survey / consumption",
+      "category": "Human behavior",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "waste",
+        "plastic",
+        "food systems",
+        "carbon",
+        "human behavior"
+      ],
+      "default_range": [
+        "never",
+        "rarely",
+        "sometimes",
+        "often",
+        "very often"
+      ],
+      "notes": "Good for single-use packaging, transport emissions, and food waste survey topics."
+    },
+    {
+      "name": "Use of reusable water bottle",
+      "topic": "Survey / waste",
+      "category": "Human behavior",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "waste",
+        "plastic",
+        "human behavior",
+        "sustainability"
+      ],
+      "default_range": [
+        "never",
+        "rarely",
+        "sometimes",
+        "often",
+        "always"
+      ],
+      "notes": "Simple and realistic for school-based surveys about single-use plastic."
+    },
+    {
+      "name": "Frequency of cafeteria use",
+      "topic": "Survey / food systems",
+      "category": "Human behavior",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "food systems",
+        "waste",
+        "food waste",
+        "school",
+        "human behavior"
+      ],
+      "default_range": [
+        "never",
+        "1–2 times/week",
+        "3–4 times/week",
+        "daily",
+        "more than once/day"
+      ],
+      "notes": "Useful for school food waste or sustainable food behavior studies."
+    },
+    {
+      "name": "Exposure to environmental signage",
+      "topic": "Survey / education",
+      "category": "Education / awareness",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "education",
+        "knowledge",
+        "waste",
+        "recycling",
+        "human behavior"
+      ],
+      "default_range": [
+        "no exposure",
+        "low exposure",
+        "moderate exposure",
+        "high exposure",
+        "very high exposure"
+      ],
+      "notes": "Good for linking school signs or campaigns to knowledge or behavior."
+    },
+    {
+      "name": "Participation in environmental activities",
+      "topic": "Survey / environmental behavior",
+      "category": "Human behavior",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "environmental behavior",
+        "conservation",
+        "education",
+        "attitudes",
+        "knowledge"
+      ],
+      "default_range": [
+        "never",
+        "once",
+        "a few times",
+        "often",
+        "very often"
+      ],
+      "notes": "Good for testing whether active participation is linked to stronger environmental attitudes."
+    },
+    {
+      "name": "Perceived convenience of recycling",
+      "topic": "Survey / waste",
+      "category": "Perception / survey",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "waste",
+        "recycling",
+        "human behavior",
+        "attitudes"
+      ],
+      "default_range": [
+        "very inconvenient",
+        "inconvenient",
+        "neutral",
+        "convenient",
+        "very convenient"
+      ],
+      "notes": "Useful for investigating barriers to recycling behavior."
+    },
+    {
+      "name": "Frequency of online shopping",
+      "topic": "Survey / consumption",
+      "category": "Human behavior",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "consumption",
+        "waste",
+        "plastic",
+        "carbon",
+        "human behavior"
+      ],
+      "default_range": [
+        "never",
+        "less than once/month",
+        "1–2 times/month",
+        "weekly",
+        "several times/week"
+      ],
+      "notes": "Good for packaging waste or consumer behavior investigations."
+    },
+    {
+      "name": "Frequency of buying new clothing",
+      "topic": "Survey / consumption",
+      "category": "Human behavior",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "consumption",
+        "sustainability",
+        "waste",
+        "carbon",
+        "human behavior"
+      ],
+      "default_range": [
+        "rarely",
+        "every few months",
+        "monthly",
+        "several times/month",
+        "weekly"
+      ],
+      "notes": "Useful for fast fashion and sustainable consumption topics."
+    },
+    {
+      "name": "Air purifier use frequency",
+      "topic": "Survey / air pollution",
+      "category": "Human behavior",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "air pollution",
+        "health",
+        "human behavior",
+        "urban"
+      ],
+      "default_range": [
+        "never",
+        "rarely",
+        "sometimes",
+        "often",
+        "always"
+      ],
+      "notes": "Useful for perceived air pollution risk or indoor air quality behavior surveys."
+    },
+    {
+      "name": "Use of single-use plastic bottles",
+      "topic": "Survey / waste",
+      "category": "Human behavior",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "waste",
+        "plastic",
+        "human behavior",
+        "sustainability"
+      ],
+      "default_range": [
+        "0 bottles/week",
+        "1–2 bottles/week",
+        "3–5 bottles/week",
+        "6–10 bottles/week",
+        "10+ bottles/week"
+      ],
+      "notes": "Clear and measurable for school-based plastic waste surveys."
+    },
+    {
+      "name": "Perceived access to green space",
+      "topic": "Survey / urban systems",
+      "category": "Perception / survey",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "green space",
+        "urban",
+        "wellbeing",
+        "human behavior",
+        "biodiversity"
+      ],
+      "default_range": [
+        "very poor access",
+        "poor access",
+        "moderate access",
+        "good access",
+        "very good access"
+      ],
+      "notes": "Useful for urban green space, wellbeing, and environmental behavior studies."
+    },
+    {
+      "name": "Household water-saving habit frequency",
+      "topic": "Survey / water resources",
+      "category": "Human behavior",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "water",
+        "water conservation",
+        "human behavior",
+        "sustainability"
+      ],
+      "default_range": [
+        "never",
+        "rarely",
+        "sometimes",
+        "often",
+        "always"
+      ],
+      "notes": "Good for water conservation behavior surveys."
+    },
+	    {
+      "name": "Human Development Index",
+      "topic": "Secondary data / development",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "development",
+        "sustainability",
+        "carbon",
+        "energy",
+        "waste",
+        "water"
+      ],
+      "default_range": [
+        "country-level data"
+      ],
+      "notes": "Useful for comparing environmental indicators with level of development."
+    },
+    {
+      "name": "Population density",
+      "topic": "Secondary data / population",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "population",
+        "urban",
+        "land use",
+        "waste",
+        "air pollution",
+        "water"
+      ],
+      "default_range": [
+        "people/km²"
+      ],
+      "notes": "Good for urban pressure, resource use, waste, or pollution investigations."
+    },
+    {
+      "name": "Access to electricity",
+      "topic": "Secondary data / energy",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "development",
+        "sustainability",
+        "carbon"
+      ],
+      "default_range": [
+        "% of population"
+      ],
+      "notes": "Useful for development-energy relationships."
+    },
+    {
+      "name": "Coal energy percentage",
+      "topic": "Secondary data / energy",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "carbon",
+        "air pollution",
+        "climate change",
+        "fossil fuels"
+      ],
+      "default_range": [
+        "% of electricity or energy supply"
+      ],
+      "notes": "Good for carbon emissions or air pollution secondary data investigations."
+    },
+    {
+      "name": "Fossil fuel energy percentage",
+      "topic": "Secondary data / energy",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "carbon",
+        "climate change",
+        "air pollution",
+        "fossil fuels"
+      ],
+      "default_range": [
+        "% of total energy use"
+      ],
+      "notes": "Useful for comparing energy structure with emissions or pollution."
+    },
+    {
+      "name": "Education index",
+      "topic": "Secondary data / development",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "development",
+        "education",
+        "sustainability",
+        "environmental behavior"
+      ],
+      "default_range": [
+        "country-level index value"
+      ],
+      "notes": "Could link education level to sustainability indicators, but students need reliable datasets."
+    },
+    {
+      "name": "Meat supply per capita",
+      "topic": "Secondary data / food systems",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "food systems",
+        "carbon",
+        "agriculture",
+        "land use",
+        "sustainability"
+      ],
+      "default_range": [
+        "kg/person/year"
+      ],
+      "notes": "Useful for diet, food systems, land use, and carbon footprint investigations."
+    },
+    {
+      "name": "Fertilizer use per hectare",
+      "topic": "Secondary data / agriculture",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "agriculture",
+        "nutrients",
+        "eutrophication",
+        "water pollution",
+        "soil"
+      ],
+      "default_range": [
+        "kg/ha"
+      ],
+      "notes": "Good for linking agriculture intensity to water pollution or eutrophication indicators."
+    },
+    {
+      "name": "Pesticide use per hectare",
+      "topic": "Secondary data / agriculture",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "agriculture",
+        "biodiversity",
+        "pollution",
+        "soil",
+        "water pollution"
+      ],
+      "default_range": [
+        "kg/ha"
+      ],
+      "notes": "Useful for biodiversity or agricultural pollution investigations."
+    },
+    {
+      "name": "Urban green space per capita",
+      "topic": "Secondary data / urban systems",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "urban",
+        "green space",
+        "microclimate",
+        "biodiversity",
+        "wellbeing"
+      ],
+      "default_range": [
+        "m²/person"
+      ],
+      "notes": "Good for city-level comparisons of urban sustainability."
+    },
+    {
+      "name": "Industrial value added percentage",
+      "topic": "Secondary data / economy",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "development",
+        "industry",
+        "carbon",
+        "air pollution",
+        "water pollution"
+      ],
+      "default_range": [
+        "% of GDP"
+      ],
+      "notes": "Useful for comparing industrialization with pollution indicators."
+    },
+    {
+      "name": "Environmental Performance Index score",
+      "topic": "Secondary data / sustainability",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "sustainability",
+        "policy",
+        "environmental performance",
+        "development"
+      ],
+      "default_range": [
+        "index value"
+      ],
+      "notes": "Good as an IV or DV, but students must understand what the index represents."
+    },
+    {
+      "name": "Vehicle ownership rate",
+      "topic": "Secondary data / transport",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "transport",
+        "air pollution",
+        "carbon",
+        "urban",
+        "development"
+      ],
+      "default_range": [
+        "vehicles per 1000 people"
+      ],
+      "notes": "Good for country or city comparisons with air pollution or carbon emissions."
+    },
+    {
+      "name": "Renewable energy investment",
+      "topic": "Secondary data / energy",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "carbon",
+        "sustainability",
+        "development"
+      ],
+      "default_range": [
+        "USD/year",
+        "% of GDP",
+        "USD per capita"
+      ],
+      "notes": "Good for renewable energy percentage or CO₂ emissions studies."
+    },
+    {
+      "name": "Agricultural land percentage",
+      "topic": "Secondary data / agriculture",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "agriculture",
+        "land use",
+        "food",
+        "water",
+        "carbon"
+      ],
+      "default_range": [
+        "% of land area"
+      ],
+      "notes": "Useful for food systems, land use, water stress, or emissions studies."
+    }
+  ],
+  "dependent_variables": [
+    {
+      "name": "PM2.5 concentration",
+      "topic": "Air pollution",
+      "category": "Air pollution",
+      "unit": "µg/m³",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Secondary data"
+      ],
+      "tags": [
+        "air pollution",
+        "traffic",
+        "urban",
+        "secondary data"
+      ],
+      "equipment": [
+        "PM2.5 sensor"
+      ]
+    },
+    {
+      "name": "PM10 concentration",
+      "topic": "Air pollution",
+      "category": "Air pollution",
+      "unit": "µg/m³",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Secondary data"
+      ],
+      "tags": [
+        "air pollution",
+        "traffic",
+        "urban",
+        "secondary data"
+      ],
+      "equipment": [
+        "PM10 sensor"
+      ]
+    },
+    {
+      "name": "Noise level",
+      "topic": "Urban systems",
+      "category": "Urban environment",
+      "unit": "dB",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "noise",
+        "traffic",
+        "urban",
+        "human disturbance"
+      ],
+      "equipment": [
+        "noise meter or phone app"
+      ]
+    },
+    {
+      "name": "Air temperature",
+      "topic": "Microclimate",
+      "category": "Microclimate",
+      "unit": "°C",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "temperature",
+        "microclimate",
+        "urban",
+        "vegetation"
+      ],
+      "equipment": [
+        "thermometer"
+      ]
+    },
+    {
+      "name": "Surface temperature",
+      "topic": "Microclimate",
+      "category": "Microclimate",
+      "unit": "°C",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "temperature",
+        "microclimate",
+        "urban",
+        "surface",
+        "shading"
+      ],
+      "equipment": [
+        "infrared thermometer"
+      ]
+    },
+    {
+      "name": "Relative humidity",
+      "topic": "Microclimate",
+      "category": "Microclimate",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "microclimate",
+        "temperature",
+        "vegetation",
+        "shading"
+      ],
+      "equipment": [
+        "hygrometer"
+      ]
+    },
+    {
+      "name": "Turbidity",
+      "topic": "Water quality",
+      "category": "Water quality",
+      "unit": "NTU or turbidity tube value",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "water pollution",
+        "turbidity",
+        "runoff"
+      ],
+      "equipment": [
+        "turbidity tube or turbidity sensor"
+      ]
+    },
+    {
+      "name": "Secchi depth",
+      "topic": "Water quality",
+      "category": "Water quality",
+      "unit": "cm or m",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "water pollution",
+        "turbidity",
+        "light"
+      ],
+      "equipment": [
+        "Secchi disk"
+      ]
+    },
+    {
+      "name": "Dissolved oxygen",
+      "topic": "Water quality",
+      "category": "Water quality",
+      "unit": "mg/L",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "water pollution",
+        "dissolved oxygen",
+        "eutrophication"
+      ],
+      "equipment": [
+        "dissolved oxygen probe or test kit"
+      ]
+    },
+    {
+      "name": "Water pH",
+      "topic": "Water quality",
+      "category": "Water quality",
+      "unit": "pH units",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "water",
+        "water pollution",
+        "acidification",
+        "pH"
+      ],
+      "equipment": [
+        "pH meter or pH strips"
+      ]
+    },
+    {
+      "name": "Electrical conductivity",
+      "topic": "Water quality",
+      "category": "Water/soil quality",
+      "unit": "µS/cm",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "soil",
+        "salinity",
+        "pollution"
+      ],
+      "equipment": [
+        "conductivity meter"
+      ]
+    },
+    {
+      "name": "Nitrate concentration",
+      "topic": "Water quality",
+      "category": "Water/soil quality",
+      "unit": "mg/L or mg/kg",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "nutrients",
+        "eutrophication",
+        "water",
+        "soil",
+        "agriculture"
+      ],
+      "equipment": [
+        "nitrate test kit"
+      ]
+    },
+    {
+      "name": "Phosphate concentration",
+      "topic": "Water quality",
+      "category": "Water/soil quality",
+      "unit": "mg/L or mg/kg",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "nutrients",
+        "eutrophication",
+        "water",
+        "soil",
+        "agriculture"
+      ],
+      "equipment": [
+        "phosphate test kit"
+      ]
+    },
+    {
+      "name": "Litter density",
+      "topic": "Waste",
+      "category": "Waste",
+      "unit": "items/m²",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "waste",
+        "litter",
+        "human disturbance",
+        "urban",
+        "human behavior"
+      ],
+      "equipment": [
+        "quadrat",
+        "gloves",
+        "data table"
+      ]
+    },
+    {
+      "name": "Plastic litter percentage",
+      "topic": "Waste",
+      "category": "Waste",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "waste",
+        "litter",
+        "plastic",
+        "human behavior"
+      ],
+      "equipment": [
+        "quadrat",
+        "gloves",
+        "data table"
+      ]
+    },
+    {
+      "name": "Species richness",
+      "topic": "Biodiversity",
+      "category": "Biodiversity",
+      "unit": "number of species",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "species richness",
+        "conservation",
+        "vegetation",
+        "habitat",
+        "human disturbance"
+      ],
+      "equipment": [
+        "quadrat",
+        "identification guide"
+      ]
+    },
+    {
+      "name": "Species abundance",
+      "topic": "Biodiversity",
+      "category": "Biodiversity",
+      "unit": "number of individuals",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "abundance",
+        "conservation",
+        "vegetation",
+        "habitat"
+      ],
+      "equipment": [
+        "quadrat",
+        "identification guide"
+      ]
+    },
+    {
+      "name": "Simpson's Diversity Index",
+      "topic": "Biodiversity",
+      "category": "Biodiversity",
+      "unit": "index value",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "conservation",
+        "habitat",
+        "vegetation",
+        "human disturbance"
+      ],
+      "equipment": [
+        "quadrat",
+        "identification guide",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Percentage vegetation cover",
+      "topic": "Biodiversity",
+      "category": "Biodiversity / vegetation",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "vegetation",
+        "biodiversity",
+        "habitat",
+        "soil",
+        "human disturbance"
+      ],
+      "equipment": [
+        "quadrat"
+      ]
+    },
+    {
+      "name": "Canopy cover",
+      "topic": "Biodiversity",
+      "category": "Vegetation / microclimate",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "vegetation",
+        "microclimate",
+        "temperature",
+        "shading",
+        "habitat"
+      ],
+      "equipment": [
+        "canopy app or visual estimate grid"
+      ]
+    },
+    {
+      "name": "Invasive species cover",
+      "topic": "Biodiversity",
+      "category": "Conservation",
+      "unit": "% cover",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "conservation",
+        "vegetation",
+        "invasive species",
+        "habitat"
+      ],
+      "equipment": [
+        "quadrat",
+        "identification guide"
+      ]
+    },
+    {
+      "name": "Earthworm abundance",
+      "topic": "Soil quality",
+      "category": "Soil / biodiversity",
+      "unit": "individuals/sample",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "soil",
+        "biodiversity",
+        "agriculture",
+        "soil health"
+      ],
+      "equipment": [
+        "soil sample tool",
+        "tray"
+      ]
+    },
+    {
+      "name": "Soil pH",
+      "topic": "Soil quality",
+      "category": "Soil quality",
+      "unit": "pH units",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "pH",
+        "agriculture",
+        "pollution",
+        "plant growth"
+      ],
+      "equipment": [
+        "soil pH meter or pH test kit"
+      ]
+    },
+    {
+      "name": "Soil moisture",
+      "topic": "Soil quality",
+      "category": "Soil quality",
+      "unit": "% or meter reading",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "moisture",
+        "water retention",
+        "vegetation",
+        "microclimate"
+      ],
+      "equipment": [
+        "soil moisture meter"
+      ]
+    },
+    {
+      "name": "Soil temperature",
+      "topic": "Soil quality",
+      "category": "Soil quality",
+      "unit": "°C",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "temperature",
+        "microclimate",
+        "mulch",
+        "shading"
+      ],
+      "equipment": [
+        "soil thermometer"
+      ]
+    },
+    {
+      "name": "Infiltration rate",
+      "topic": "Soil quality",
+      "category": "Soil / water",
+      "unit": "cm/min",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "water",
+        "runoff",
+        "infiltration",
+        "urban",
+        "surface"
+      ],
+      "equipment": [
+        "single-ring infiltrometer",
+        "water cylinder",
+        "stopwatch"
+      ]
+    },
+    {
+      "name": "Water-holding capacity",
+      "topic": "Soil quality",
+      "category": "Soil quality",
+      "unit": "% water retained",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "water retention",
+        "agriculture",
+        "biochar",
+        "compost"
+      ],
+      "equipment": [
+        "soil samples",
+        "water",
+        "balance"
+      ]
+    },
+    {
+      "name": "Soil compaction",
+      "topic": "Soil quality",
+      "category": "Soil quality",
+      "unit": "penetration depth or resistance",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "soil",
+        "compaction",
+        "human disturbance",
+        "footpath"
+      ],
+      "equipment": [
+        "penetrometer or simple probe"
+      ]
+    },
+    {
+      "name": "Seed germination percentage",
+      "topic": "Plant growth / agriculture",
+      "category": "Plant growth",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "germination",
+        "plant growth",
+        "salinity",
+        "pH",
+        "agriculture"
+      ],
+      "equipment": [
+        "seeds",
+        "petri dishes",
+        "growth medium"
+      ]
+    },
+    {
+      "name": "Plant growth rate",
+      "topic": "Plant growth / agriculture",
+      "category": "Plant growth",
+      "unit": "cm/day",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "plant growth",
+        "agriculture",
+        "nutrients",
+        "compost",
+        "salinity",
+        "light"
+      ],
+      "equipment": [
+        "plants/seeds",
+        "ruler"
+      ]
+    },
+    {
+      "name": "Plant biomass",
+      "topic": "Plant growth / agriculture",
+      "category": "Plant growth",
+      "unit": "g",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "plant growth",
+        "agriculture",
+        "nutrients",
+        "compost",
+        "biochar"
+      ],
+      "equipment": [
+        "plants",
+        "balance"
+      ]
+    },
+    {
+      "name": "Duckweed growth",
+      "topic": "Eutrophication / lab",
+      "category": "Aquatic ecosystems",
+      "unit": "frond number or % cover",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "duckweed",
+        "plant growth",
+        "eutrophication",
+        "nutrients",
+        "water"
+      ],
+      "equipment": [
+        "duckweed",
+        "containers",
+        "lamp"
+      ]
+    },
+    {
+      "name": "Algal growth",
+      "topic": "Eutrophication / lab",
+      "category": "Aquatic ecosystems",
+      "unit": "turbidity, color score, or biomass",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "algae",
+        "eutrophication",
+        "nutrients",
+        "water"
+      ],
+      "equipment": [
+        "algae culture",
+        "containers",
+        "light source"
+      ]
+    },
+    {
+      "name": "Compost decomposition rate",
+      "topic": "Waste / decomposition",
+      "category": "Waste / soil",
+      "unit": "mass loss/time",
+      "compatible_ia_types": [
+        "Lab experiment",
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "decomposition",
+        "waste",
+        "soil",
+        "temperature",
+        "moisture"
+      ],
+      "equipment": [
+        "organic material",
+        "balance"
+      ]
+    },
+    {
+      "name": "Environmental knowledge score",
+      "topic": "Survey / education",
+      "category": "Survey",
+      "unit": "quiz score or %",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "knowledge",
+        "education",
+        "human behavior",
+        "conservation",
+        "waste"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Support for recycling policy",
+      "topic": "Survey / waste",
+      "category": "Survey",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "waste",
+        "recycling",
+        "policy",
+        "attitudes",
+        "human behavior"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Support for conservation strategy",
+      "topic": "Survey / conservation",
+      "category": "Survey",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "conservation",
+        "policy",
+        "attitudes",
+        "biodiversity"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Self-reported plastic use",
+      "topic": "Survey / waste",
+      "category": "Survey",
+      "unit": "items/day or behavior score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "waste",
+        "plastic",
+        "human behavior"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Frequency of green space use",
+      "topic": "Survey / urban systems",
+      "category": "Survey",
+      "unit": "visits/week",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "green space",
+        "urban",
+        "human behavior"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Land surface temperature",
+      "topic": "Secondary data / urban heat",
+      "category": "Secondary data / climate",
+      "unit": "°C",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "temperature",
+        "urban",
+        "land use",
+        "green space"
+      ],
+      "equipment": [
+        "satellite data or online dataset"
+      ]
+    },
+    {
+      "name": "NDVI",
+      "topic": "Secondary data / vegetation",
+      "category": "Secondary data / vegetation",
+      "unit": "index value",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "vegetation",
+        "forest",
+        "urban",
+        "conservation"
+      ],
+      "equipment": [
+        "satellite data or GIS tool"
+      ]
+    },
+    {
+      "name": "CO₂ emissions per capita",
+      "topic": "Secondary data / climate",
+      "category": "Secondary data / climate",
+      "unit": "tonnes/person/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "carbon",
+        "energy",
+        "development",
+        "urban"
+      ],
+      "equipment": [
+        "online dataset"
+      ]
+    },
+    {
+      "name": "Renewable energy percentage",
+      "topic": "Secondary data / energy",
+      "category": "Secondary data / energy",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "carbon",
+        "development"
+      ],
+      "equipment": [
+        "online dataset"
+      ]
+    },
+    {
+      "name": "Forest cover percentage",
+      "topic": "Secondary data / forests",
+      "category": "Secondary data / conservation",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "forest",
+        "conservation",
+        "biodiversity",
+        "carbon"
+      ],
+      "equipment": [
+        "online dataset"
+      ]
+    },
+    {
+      "name": "Waste generation per capita",
+      "topic": "Secondary data / waste",
+      "category": "Secondary data / waste",
+      "unit": "kg/person/day or kg/person/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "waste",
+        "development",
+        "urban"
+      ],
+      "equipment": [
+        "online dataset"
+      ]
+    },
+    {
+      "name": "Ecological footprint",
+      "topic": "Secondary data / sustainability",
+      "category": "Secondary data / sustainability",
+      "unit": "gha/person",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "sustainability",
+        "development",
+        "carbon",
+        "resource use"
+      ],
+      "equipment": [
+        "online dataset"
+      ]
+    },
+    {
+      "name": "CO₂ concentration",
+      "topic": "Air pollution",
+      "category": "Air pollution / indoor air quality",
+      "unit": "ppm",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "air pollution",
+        "carbon dioxide",
+        "indoor air",
+        "human behavior",
+        "urban"
+      ],
+      "equipment": [
+        "CO₂ sensor"
+      ]
+    },
+    {
+      "name": "AQI value",
+      "topic": "Air pollution",
+      "category": "Air pollution / secondary data",
+      "unit": "index value",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "air pollution",
+        "secondary data",
+        "urban",
+        "traffic",
+        "human health"
+      ],
+      "equipment": [
+        "online dataset"
+      ]
+    },
+    {
+      "name": "NO₂ concentration",
+      "topic": "Air pollution",
+      "category": "Air pollution / secondary data",
+      "unit": "µg/m³ or ppb",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "air pollution",
+        "traffic",
+        "urban",
+        "secondary data",
+        "transport"
+      ],
+      "equipment": [
+        "online dataset"
+      ]
+    },
+    {
+      "name": "O₃ concentration",
+      "topic": "Air pollution",
+      "category": "Air pollution / secondary data",
+      "unit": "µg/m³ or ppb",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "air pollution",
+        "secondary data",
+        "urban",
+        "climate",
+        "photochemical smog"
+      ],
+      "equipment": [
+        "online dataset"
+      ]
+    },
+    {
+      "name": "Tree density near roads",
+      "topic": "Air pollution",
+      "category": "Urban vegetation",
+      "unit": "trees/100 m or trees/m²",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "vegetation",
+        "air pollution",
+        "urban",
+        "traffic",
+        "green space"
+      ],
+      "equipment": [
+        "transect tape",
+        "data table"
+      ]
+    },
+    {
+      "name": "Traffic count",
+      "topic": "Urban systems",
+      "category": "Urban environment",
+      "unit": "vehicles/min",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "traffic",
+        "urban",
+        "air pollution",
+        "noise",
+        "human behavior"
+      ],
+      "equipment": [
+        "stopwatch",
+        "tally counter"
+      ]
+    },
+    {
+      "name": "Total dissolved solids",
+      "topic": "Water quality",
+      "category": "Water quality",
+      "unit": "ppm or mg/L",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "water pollution",
+        "salinity",
+        "urban",
+        "runoff"
+      ],
+      "equipment": [
+        "TDS meter"
+      ]
+    },
+    {
+      "name": "Water temperature",
+      "topic": "Water quality",
+      "category": "Water quality / microclimate",
+      "unit": "°C",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "temperature",
+        "microclimate",
+        "dissolved oxygen",
+        "shading"
+      ],
+      "equipment": [
+        "thermometer or temperature probe"
+      ]
+    },
+    {
+      "name": "Chloride concentration",
+      "topic": "Water quality",
+      "category": "Water quality",
+      "unit": "mg/L",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "water",
+        "water pollution",
+        "salinity",
+        "runoff",
+        "urban"
+      ],
+      "equipment": [
+        "chloride test kit"
+      ]
+    },
+    {
+      "name": "Ammonia concentration",
+      "topic": "Water quality",
+      "category": "Water quality",
+      "unit": "mg/L",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "water pollution",
+        "nutrients",
+        "eutrophication",
+        "agriculture"
+      ],
+      "equipment": [
+        "ammonia test kit"
+      ]
+    },
+    {
+      "name": "Macroinvertebrate biotic index",
+      "topic": "Water quality",
+      "category": "Water quality / biodiversity",
+      "unit": "index value",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "water pollution",
+        "biodiversity",
+        "habitat",
+        "conservation"
+      ],
+      "equipment": [
+        "net",
+        "tray",
+        "identification guide"
+      ]
+    },
+    {
+      "name": "Floating litter density",
+      "topic": "Water quality",
+      "category": "Waste / water pollution",
+      "unit": "items/m² or items/100 m shoreline",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "waste",
+        "litter",
+        "plastic",
+        "human behavior",
+        "urban"
+      ],
+      "equipment": [
+        "transect tape",
+        "quadrat or shoreline survey sheet"
+      ]
+    },
+    {
+      "name": "Plant species richness",
+      "topic": "Biodiversity",
+      "category": "Biodiversity / vegetation",
+      "unit": "number of plant species",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "species richness",
+        "vegetation",
+        "habitat",
+        "conservation",
+        "human disturbance"
+      ],
+      "equipment": [
+        "quadrat",
+        "plant identification guide"
+      ]
+    },
+    {
+      "name": "Invertebrate abundance",
+      "topic": "Biodiversity",
+      "category": "Biodiversity",
+      "unit": "individuals/sample",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "abundance",
+        "habitat",
+        "soil",
+        "human disturbance",
+        "conservation"
+      ],
+      "equipment": [
+        "pitfall trap or timed search",
+        "tray",
+        "identification guide"
+      ]
+    },
+    {
+      "name": "Pollinator visit frequency",
+      "topic": "Biodiversity",
+      "category": "Biodiversity / pollinators",
+      "unit": "visits/10 min",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "pollinators",
+        "vegetation",
+        "conservation",
+        "habitat",
+        "flower abundance"
+      ],
+      "equipment": [
+        "stopwatch",
+        "data table"
+      ]
+    },
+    {
+      "name": "Bird species richness",
+      "topic": "Biodiversity",
+      "category": "Biodiversity",
+      "unit": "number of bird species",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "species richness",
+        "habitat",
+        "conservation",
+        "urban",
+        "green space"
+      ],
+      "equipment": [
+        "bird identification guide or app",
+        "data table"
+      ]
+    },
+    {
+      "name": "Tree species richness",
+      "topic": "Biodiversity",
+      "category": "Biodiversity / vegetation",
+      "unit": "number of tree species",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "species richness",
+        "vegetation",
+        "habitat",
+        "green space",
+        "conservation"
+      ],
+      "equipment": [
+        "tree identification guide",
+        "transect tape"
+      ]
+    },
+    {
+      "name": "Native species percentage",
+      "topic": "Biodiversity",
+      "category": "Conservation",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "conservation",
+        "native species",
+        "invasive species",
+        "vegetation",
+        "habitat"
+      ],
+      "equipment": [
+        "quadrat",
+        "identification guide"
+      ]
+    },
+    {
+      "name": "Bare ground percentage",
+      "topic": "Biodiversity",
+      "category": "Vegetation / human disturbance",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "vegetation",
+        "soil",
+        "human disturbance",
+        "biodiversity",
+        "habitat",
+        "erosion"
+      ],
+      "equipment": [
+        "quadrat"
+      ]
+    },
+    {
+      "name": "Leaf litter depth",
+      "topic": "Biodiversity",
+      "category": "Habitat / decomposition",
+      "unit": "cm",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "vegetation",
+        "soil",
+        "decomposition",
+        "habitat",
+        "biodiversity",
+        "moisture"
+      ],
+      "equipment": [
+        "ruler",
+        "quadrat"
+      ]
+    },
+    {
+      "name": "Soil organic matter content",
+      "topic": "Soil quality",
+      "category": "Soil quality",
+      "unit": "% or proxy score",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "soil health",
+        "agriculture",
+        "decomposition",
+        "carbon",
+        "fertility"
+      ],
+      "equipment": [
+        "soil samples",
+        "balance",
+        "drying oven or simple proxy test"
+      ]
+    },
+    {
+      "name": "Soil texture category",
+      "topic": "Soil quality",
+      "category": "Soil quality",
+      "unit": "texture class or % sand/silt/clay",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "water retention",
+        "infiltration",
+        "agriculture",
+        "soil health"
+      ],
+      "equipment": [
+        "soil samples",
+        "settling jar or texture test"
+      ]
+    },
+    {
+      "name": "Soil salinity",
+      "topic": "Soil quality",
+      "category": "Soil quality",
+      "unit": "µS/cm or ppt",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "salinity",
+        "agriculture",
+        "plant growth",
+        "water",
+        "pollution"
+      ],
+      "equipment": [
+        "conductivity meter",
+        "soil samples"
+      ]
+    },
+    {
+      "name": "Soil nitrate concentration",
+      "topic": "Soil quality",
+      "category": "Soil nutrients",
+      "unit": "mg/kg",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "nutrients",
+        "agriculture",
+        "plant growth",
+        "eutrophication"
+      ],
+      "equipment": [
+        "soil nitrate test kit"
+      ]
+    },
+    {
+      "name": "Soil phosphate concentration",
+      "topic": "Soil quality",
+      "category": "Soil nutrients",
+      "unit": "mg/kg",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "nutrients",
+        "agriculture",
+        "plant growth",
+        "eutrophication"
+      ],
+      "equipment": [
+        "soil phosphate test kit"
+      ]
+    },
+    {
+      "name": "Soil bulk density",
+      "topic": "Soil quality",
+      "category": "Soil quality",
+      "unit": "g/cm³",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "compaction",
+        "soil health",
+        "infiltration",
+        "agriculture"
+      ],
+      "equipment": [
+        "soil core sampler",
+        "balance",
+        "ruler"
+      ]
+    },
+    {
+      "name": "Root length",
+      "topic": "Plant growth / agriculture",
+      "category": "Plant growth",
+      "unit": "cm",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "plant growth",
+        "germination",
+        "salinity",
+        "pH",
+        "soil",
+        "agriculture"
+      ],
+      "equipment": [
+        "seeds",
+        "ruler",
+        "petri dishes or pots"
+      ]
+    },
+    {
+      "name": "Seedling survival rate",
+      "topic": "Plant growth / agriculture",
+      "category": "Plant growth",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "plant growth",
+        "germination",
+        "water",
+        "salinity",
+        "pH",
+        "agriculture"
+      ],
+      "equipment": [
+        "seeds or seedlings",
+        "pots",
+        "data table"
+      ]
+    },
+    {
+      "name": "Light intensity",
+      "topic": "Microclimate",
+      "category": "Microclimate",
+      "unit": "lux",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "light",
+        "microclimate",
+        "vegetation",
+        "shading",
+        "plant growth",
+        "temperature"
+      ],
+      "equipment": [
+        "light meter or phone app"
+      ]
+    },
+    {
+      "name": "Wind speed",
+      "topic": "Microclimate",
+      "category": "Microclimate",
+      "unit": "m/s",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "microclimate",
+        "wind",
+        "urban",
+        "temperature",
+        "vegetation"
+      ],
+      "equipment": [
+        "anemometer"
+      ]
+    },
+    {
+      "name": "Heat index",
+      "topic": "Microclimate",
+      "category": "Microclimate",
+      "unit": "°C",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "microclimate",
+        "temperature",
+        "humidity",
+        "urban",
+        "human health"
+      ],
+      "equipment": [
+        "thermometer",
+        "hygrometer",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Ground-level temperature",
+      "topic": "Microclimate",
+      "category": "Microclimate / urban heat",
+      "unit": "°C",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "temperature",
+        "microclimate",
+        "urban",
+        "surface",
+        "vegetation",
+        "shading"
+      ],
+      "equipment": [
+        "thermometer"
+      ]
+    },
+    {
+      "name": "Cooling effect of vegetation",
+      "topic": "Microclimate",
+      "category": "Microclimate / vegetation",
+      "unit": "°C difference",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Secondary data"
+      ],
+      "tags": [
+        "temperature",
+        "microclimate",
+        "vegetation",
+        "green space",
+        "urban",
+        "secondary data"
+      ],
+      "equipment": [
+        "thermometer or online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Litter mass",
+      "topic": "Waste",
+      "category": "Waste",
+      "unit": "g/m²",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "waste",
+        "litter",
+        "human behavior",
+        "urban",
+        "plastic"
+      ],
+      "equipment": [
+        "quadrat",
+        "gloves",
+        "balance",
+        "bags"
+      ]
+    },
+    {
+      "name": "Cigarette butt density",
+      "topic": "Waste",
+      "category": "Waste / human behavior",
+      "unit": "items/m²",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "waste",
+        "litter",
+        "human behavior",
+        "urban",
+        "pollution"
+      ],
+      "equipment": [
+        "quadrat",
+        "gloves",
+        "data table"
+      ]
+    },
+    {
+      "name": "Food waste mass",
+      "topic": "Waste",
+      "category": "Waste / food systems",
+      "unit": "g/person or g/day",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Survey"
+      ],
+      "tags": [
+        "waste",
+        "food",
+        "human behavior",
+        "school",
+        "sustainability",
+        "survey"
+      ],
+      "equipment": [
+        "balance",
+        "collection container",
+        "survey form"
+      ]
+    },
+    {
+      "name": "Recycling contamination rate",
+      "topic": "Waste",
+      "category": "Waste / recycling",
+      "unit": "% incorrect items",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "waste",
+        "recycling",
+        "human behavior",
+        "plastic",
+        "school"
+      ],
+      "equipment": [
+        "gloves",
+        "data table",
+        "waste sorting checklist"
+      ]
+    },
+    {
+      "name": "Waste sorting accuracy",
+      "topic": "Waste",
+      "category": "Waste / recycling",
+      "unit": "% correct",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Survey"
+      ],
+      "tags": [
+        "waste",
+        "recycling",
+        "human behavior",
+        "knowledge",
+        "education",
+        "survey"
+      ],
+      "equipment": [
+        "waste sorting task or survey",
+        "data table"
+      ]
+    },
+    {
+      "name": "Single-use plastic use frequency",
+      "topic": "Survey / waste",
+      "category": "Survey / waste behavior",
+      "unit": "times/week",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "waste",
+        "plastic",
+        "human behavior",
+        "sustainability"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Reported recycling behavior score",
+      "topic": "Survey / waste",
+      "category": "Survey / behavior",
+      "unit": "score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "waste",
+        "recycling",
+        "human behavior",
+        "attitudes"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Electricity consumption",
+      "topic": "Energy / climate change",
+      "category": "Energy use",
+      "unit": "kWh",
+      "compatible_ia_types": [
+        "Secondary data",
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "energy",
+        "carbon",
+        "sustainability",
+        "human behavior",
+        "secondary data"
+      ],
+      "equipment": [
+        "electricity bill or meter reading",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Energy use per GDP",
+      "topic": "Secondary data / energy",
+      "category": "Secondary data / energy",
+      "unit": "kWh per $GDP",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "development",
+        "carbon",
+        "sustainability"
+      ],
+      "equipment": [
+        "online dataset"
+      ]
+    },
+    {
+      "name": "Household energy behavior score",
+      "topic": "Survey / energy",
+      "category": "Survey / behavior",
+      "unit": "score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "energy",
+        "carbon",
+        "human behavior",
+        "sustainability"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Estimated transport carbon footprint",
+      "topic": "Survey / transport",
+      "category": "Survey / carbon footprint",
+      "unit": "kg CO₂/week",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "transport",
+        "carbon",
+        "air pollution",
+        "human behavior"
+      ],
+      "equipment": [
+        "survey form",
+        "carbon conversion table"
+      ]
+    },
+    {
+      "name": "Food miles",
+      "topic": "Food systems / sustainability",
+      "category": "Food systems",
+      "unit": "km",
+      "compatible_ia_types": [
+        "Survey",
+        "Secondary data"
+      ],
+      "tags": [
+        "food",
+        "carbon",
+        "sustainability",
+        "transport",
+        "secondary data",
+        "survey"
+      ],
+      "equipment": [
+        "survey form or online product data",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Diet carbon footprint",
+      "topic": "Food systems / sustainability",
+      "category": "Survey / carbon footprint",
+      "unit": "kg CO₂e/day or week",
+      "compatible_ia_types": [
+        "Survey",
+        "Secondary data"
+      ],
+      "tags": [
+        "survey",
+        "food",
+        "carbon",
+        "sustainability",
+        "human behavior"
+      ],
+      "equipment": [
+        "survey form",
+        "carbon conversion table"
+      ]
+    },
+    {
+      "name": "Meat consumption frequency",
+      "topic": "Survey / food systems",
+      "category": "Survey / behavior",
+      "unit": "times/week",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "food",
+        "carbon",
+        "human behavior",
+        "sustainability"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Willingness to reduce meat consumption",
+      "topic": "Survey / food systems",
+      "category": "Survey / attitudes",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "food",
+        "attitudes",
+        "carbon",
+        "sustainability",
+        "human behavior"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Local food percentage",
+      "topic": "Survey / food systems",
+      "category": "Food systems",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "food",
+        "sustainability",
+        "carbon",
+        "human behavior"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Crop yield",
+      "topic": "Plant growth / agriculture",
+      "category": "Agriculture",
+      "unit": "g/plant or g/m²",
+      "compatible_ia_types": [
+        "Lab experiment",
+        "Secondary data"
+      ],
+      "tags": [
+        "agriculture",
+        "plant growth",
+        "food",
+        "sustainability",
+        "secondary data"
+      ],
+      "equipment": [
+        "balance",
+        "plants or online dataset"
+      ]
+    },
+    {
+      "name": "Environmental concern score",
+      "topic": "Survey / environmental attitudes",
+      "category": "Survey / attitudes",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "attitudes",
+        "sustainability",
+        "conservation",
+        "climate change"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Pro-environmental behavior score",
+      "topic": "Survey / environmental behavior",
+      "category": "Survey / behavior",
+      "unit": "score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "human behavior",
+        "sustainability",
+        "waste",
+        "energy",
+        "conservation"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Willingness to pay for sustainability",
+      "topic": "Survey / environmental attitudes",
+      "category": "Survey / attitudes",
+      "unit": "RMB/month or Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "attitudes",
+        "sustainability",
+        "policy",
+        "human behavior"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Perceived air pollution risk",
+      "topic": "Survey / air pollution",
+      "category": "Survey / attitudes",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "air pollution",
+        "attitudes",
+        "human health",
+        "urban"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Recycling knowledge score",
+      "topic": "Survey / waste",
+      "category": "Survey / knowledge",
+      "unit": "score or %",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "knowledge",
+        "waste",
+        "recycling",
+        "education"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+    {
+      "name": "Climate change concern score",
+      "topic": "Survey / climate change",
+      "category": "Survey / attitudes",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "climate change",
+        "attitudes",
+        "carbon",
+        "sustainability"
+      ],
+      "equipment": [
+        "survey form"
+      ]
+    },
+	    {
+      "name": "Sustainable transport behavior score",
+      "topic": "Survey / transport",
+      "category": "Environmental behavior",
+      "unit": "score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "transport",
+        "carbon",
+        "air pollution",
+        "human behavior"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Willingness to use public transport",
+      "topic": "Survey / transport",
+      "category": "Environmental attitudes",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "transport",
+        "carbon",
+        "urban",
+        "attitudes",
+        "human behavior"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Food waste behavior score",
+      "topic": "Survey / food systems",
+      "category": "Environmental behavior",
+      "unit": "score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "food waste",
+        "waste",
+        "food systems",
+        "human behavior"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Support for school food waste reduction program",
+      "topic": "Survey / food systems",
+      "category": "Environmental attitudes",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "food waste",
+        "waste",
+        "school",
+        "policy",
+        "attitudes"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Waste sorting confidence score",
+      "topic": "Survey / waste",
+      "category": "Environmental behavior",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "waste",
+        "recycling",
+        "knowledge",
+        "human behavior"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Perceived barriers to recycling score",
+      "topic": "Survey / waste",
+      "category": "Environmental attitudes",
+      "unit": "score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "waste",
+        "recycling",
+        "attitudes",
+        "human behavior"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Single-use plastic bottle use frequency",
+      "topic": "Survey / waste",
+      "category": "Environmental behavior",
+      "unit": "bottles/week",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "waste",
+        "plastic",
+        "human behavior",
+        "sustainability"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Water conservation behavior score",
+      "topic": "Survey / water resources",
+      "category": "Environmental behavior",
+      "unit": "score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "water",
+        "water conservation",
+        "sustainability",
+        "human behavior"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Energy-saving behavior score",
+      "topic": "Survey / energy",
+      "category": "Environmental behavior",
+      "unit": "score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "energy",
+        "carbon",
+        "climate change",
+        "human behavior",
+        "sustainability"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Support for renewable energy policy",
+      "topic": "Survey / energy",
+      "category": "Environmental attitudes",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "energy",
+        "renewable energy",
+        "policy",
+        "climate change",
+        "attitudes"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Perceived access to green space score",
+      "topic": "Survey / urban systems",
+      "category": "Environmental perception",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "green space",
+        "urban",
+        "wellbeing",
+        "biodiversity",
+        "human behavior"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Support for green space expansion",
+      "topic": "Survey / urban systems",
+      "category": "Environmental attitudes",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "green space",
+        "urban",
+        "policy",
+        "biodiversity",
+        "attitudes"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Awareness of biodiversity loss score",
+      "topic": "Survey / biodiversity",
+      "category": "Environmental knowledge",
+      "unit": "score or %",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "biodiversity",
+        "conservation",
+        "knowledge",
+        "environmental concern"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Willingness to join conservation action",
+      "topic": "Survey / conservation",
+      "category": "Environmental behavior intention",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "conservation",
+        "biodiversity",
+        "human behavior",
+        "attitudes"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Environmental action frequency",
+      "topic": "Survey / environmental behavior",
+      "category": "Environmental behavior",
+      "unit": "actions/month",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "environmental behavior",
+        "sustainability",
+        "human behavior",
+        "conservation"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Urban green space percentage",
+      "topic": "Secondary data / urban systems",
+      "category": "Secondary data / urban systems",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "urban",
+        "green space",
+        "biodiversity",
+        "temperature",
+        "sustainability"
+      ],
+      "equipment": [
+        "online dataset or GIS map"
+      ]
+    },
+    {
+      "name": "Forest loss rate",
+      "topic": "Secondary data / forests",
+      "category": "Secondary data / conservation",
+      "unit": "%/year or ha/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "forest",
+        "biodiversity",
+        "carbon",
+        "conservation",
+        "land use"
+      ],
+      "equipment": [
+        "online dataset"
+      ]
+    },
+    {
+      "name": "Water stress index",
+      "topic": "Secondary data / water resources",
+      "category": "Secondary data / water",
+      "unit": "index value",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "water",
+        "resource use",
+        "development",
+        "sustainability",
+        "climate change"
+      ],
+      "equipment": [
+        "online dataset"
+      ]
+    },
+	    {
+      "name": "Annual mean PM2.5 concentration",
+      "topic": "Secondary data / air pollution",
+      "category": "Air pollution",
+      "unit": "µg/m³",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "air pollution",
+        "urban",
+        "health",
+        "development"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "NO₂ concentration",
+      "topic": "Secondary data / air pollution",
+      "category": "Air pollution",
+      "unit": "µg/m³ or ppb",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "air pollution",
+        "traffic",
+        "urban",
+        "health"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Methane emissions per capita",
+      "topic": "Secondary data / climate change",
+      "category": "Climate change",
+      "unit": "tonnes CO₂e/person/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "climate change",
+        "carbon",
+        "agriculture",
+        "energy"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Energy consumption per capita",
+      "topic": "Secondary data / energy",
+      "category": "Energy",
+      "unit": "kWh/person/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "carbon",
+        "development",
+        "sustainability"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Fossil fuel energy consumption percentage",
+      "topic": "Secondary data / energy",
+      "category": "Energy",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "carbon",
+        "climate change",
+        "fossil fuels"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Municipal waste recycling rate",
+      "topic": "Secondary data / waste",
+      "category": "Waste",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "waste",
+        "recycling",
+        "sustainability",
+        "urban"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Plastic waste generation per capita",
+      "topic": "Secondary data / waste",
+      "category": "Waste",
+      "unit": "kg/person/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "waste",
+        "plastic",
+        "consumption",
+        "sustainability"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Freshwater withdrawal per capita",
+      "topic": "Secondary data / water resources",
+      "category": "Water resources",
+      "unit": "m³/person/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "water",
+        "water stress",
+        "development",
+        "agriculture"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Agricultural water withdrawal percentage",
+      "topic": "Secondary data / water resources",
+      "category": "Water resources",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "water",
+        "agriculture",
+        "water stress",
+        "sustainability"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Fertilizer consumption per hectare",
+      "topic": "Secondary data / agriculture",
+      "category": "Agriculture",
+      "unit": "kg/ha",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "agriculture",
+        "nutrients",
+        "eutrophication",
+        "water pollution"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Pesticide use per hectare",
+      "topic": "Secondary data / agriculture",
+      "category": "Agriculture",
+      "unit": "kg/ha",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "agriculture",
+        "biodiversity",
+        "soil",
+        "water pollution",
+        "pollution"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Cereal yield",
+      "topic": "Secondary data / agriculture",
+      "category": "Agriculture",
+      "unit": "kg/ha",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "agriculture",
+        "food systems",
+        "land use",
+        "development"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Threatened species count",
+      "topic": "Secondary data / biodiversity",
+      "category": "Biodiversity",
+      "unit": "number of species",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "biodiversity",
+        "conservation",
+        "protected areas",
+        "development"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Red List Index",
+      "topic": "Secondary data / biodiversity",
+      "category": "Biodiversity",
+      "unit": "index value",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "biodiversity",
+        "conservation",
+        "protected areas",
+        "sustainability"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Environmental Performance Index score",
+      "topic": "Secondary data / sustainability",
+      "category": "Sustainability",
+      "unit": "index value",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "sustainability",
+        "policy",
+        "development",
+        "environmental performance"
+      ],
+      "equipment": [
+        "online database",
+        "spreadsheet"
+      ]
+    }
+  ]
+}

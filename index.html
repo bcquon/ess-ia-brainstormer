@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESS IA Designer</title>
+  <style>
+    :root {
+      --bg: #f6f7f2;
+      --card: #ffffff;
+      --text: #1f2933;
+      --muted: #667085;
+      --border: #d9e2dc;
+      --accent: #2f855a;
+      --accent-dark: #246b49;
+      --accent-soft: #e6f4ec;
+      --blue: #2458a7;
+      --blue-soft: #e9f2ff;
+      --warning: #b54708;
+      --warning-soft: #fff4e5;
+      --danger: #b42318;
+      --danger-soft: #fff0ef;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    header {
+      padding: 28px 20px 18px;
+      background: linear-gradient(135deg, #e6f4ec, #f8fbff);
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 980px;
+    }
+
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 18px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tab-btn {
+      background: white;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .tab-btn.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .panel, .proposal-card, .field-card, .choice-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.04);
+    }
+
+    .panel {
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+
+    .panel h2 { margin-top: 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .choice-card {
+      padding: 14px;
+      cursor: pointer;
+      transition: 0.15s ease;
+    }
+
+    .choice-card:hover {
+      transform: translateY(-2px);
+      border-color: #9ad0b2;
+    }
+
+    .choice-card.selected {
+      border: 2px solid var(--accent);
+      background: #fbfffc;
+    }
+
+    .choice-card h3 {
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+    }
+
+    .topic-block {
+      margin-top: 20px;
+    }
+
+    .topic-title {
+      margin: 0 0 8px;
+      padding: 8px 12px;
+      border-left: 6px solid var(--accent);
+      background: var(--accent-soft);
+      border-radius: 10px;
+      color: var(--accent-dark);
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    select, input, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: white;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    button {
+      cursor: pointer;
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover { background: var(--accent-dark); }
+
+    .btn-secondary {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid #b7dfc8;
+    }
+
+    .btn-blue {
+      background: var(--blue-soft);
+      color: var(--blue);
+      border: 1px solid #bfd6ff;
+    }
+
+    .btn-danger {
+      background: var(--danger-soft);
+      color: var(--danger);
+      border: 1px solid #ffc9c3;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid #b7dfc8;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+
+    .tag.blue {
+      background: var(--blue-soft);
+      color: var(--blue);
+      border-color: #bfd6ff;
+    }
+
+    .tag.warning {
+      background: var(--warning-soft);
+      color: var(--warning);
+      border-color: #ffd599;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .hidden { display: none; }
+
+    .prompt-box, .json-box, .copy-box {
+      white-space: pre-wrap;
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 0.92rem;
+      overflow-x: auto;
+    }
+
+    .status {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .status.ok {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid #b7dfc8;
+    }
+
+    .status.warn {
+      background: var(--warning-soft);
+      color: var(--warning);
+      border: 1px solid #ffd599;
+    }
+
+    .status.danger {
+      background: var(--danger-soft);
+      color: var(--danger);
+      border: 1px solid #ffc9c3;
+    }
+
+    .field-card {
+      padding: 14px;
+    }
+
+    .field-card h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    .list-editor {
+      display: grid;
+      gap: 8px;
+    }
+
+    .list-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .proposal-card {
+      padding: 22px;
+      background: white;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .proposal-card h2 {
+      margin: 0 0 10px;
+      font-size: 1.8rem;
+      color: var(--accent-dark);
+    }
+
+    .proposal-card h3 {
+      margin-bottom: 6px;
+      color: var(--accent-dark);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 4px;
+    }
+
+    .proposal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 18px;
+    }
+
+    .proposal-card ul {
+      margin-top: 6px;
+      padding-left: 20px;
+    }
+
+    .proposal-section {
+      break-inside: avoid;
+    }
+
+    .teacher-box {
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 780px) {
+      .proposal-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>ESS IA Designer</h1>
+    <p>
+      Choose IA type first. Then choose a DV grouped by topic. The program recommends suitable IVs, builds an AI prompt, imports the AI response, and exports a PNG proposal card.
+    </p>
+  </header>
+
+  <main>
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="type">1. IA type</button>
+      <button class="tab-btn" data-tab="dv">2. Choose DV by topic</button>
+      <button class="tab-btn" data-tab="iv">3. Choose recommended IV</button>
+      <button class="tab-btn" data-tab="prompt">4. AI prompt</button>
+      <button class="tab-btn" data-tab="import">5. Paste AI response</button>
+      <button class="tab-btn" data-tab="edit">6. Edit proposal</button>
+      <button class="tab-btn" data-tab="export">7. Export PNG</button>
+    </nav>
+
+    <section id="tab-type" class="tab panel">
+      <h2>1. Choose IA type</h2>
+      <p class="small">This filters the DV list so students only see choices that fit the type of investigation.</p>
+
+      <label for="iaTypeSelect">IA type</label>
+      <select id="iaTypeSelect"></select>
+
+      <div class="status ok" id="typeInfo"></div>
+
+      <div class="btn-row">
+        <button class="btn-primary" id="showDvsBtn">Show DVs by topic</button>
+      </div>
+    </section>
+
+    <section id="tab-dv" class="tab panel hidden">
+      <h2>2. Choose a DV by topic</h2>
+      <p class="small">The DV is the thing students measure. These are grouped by topic to make browsing easier.</p>
+
+      <label for="dvSearch">Search/filter DVs</label>
+      <input id="dvSearch" placeholder="e.g. soil, water, PM2.5, biodiversity, survey" />
+
+      <div id="dvGroups"></div>
+
+      <div class="btn-row">
+        <button class="btn-primary" id="recommendIvsBtn">Recommend IVs for selected DV</button>
+      </div>
+
+      <div id="dvStatus" class="status hidden"></div>
+    </section>
+
+    <section id="tab-iv" class="tab panel hidden">
+      <h2>3. Choose a recommended IV</h2>
+      <p class="small">IVs are scored by tag overlap with the DV and whether they fit the IA type.</p>
+
+      <div id="recommendationSummary" class="status ok"></div>
+
+      <label for="ivSearch">Search/filter recommended IVs</label>
+      <input id="ivSearch" placeholder="e.g. distance, land use, fertilizer, age" />
+
+      <div id="ivGrid" class="choice-grid"></div>
+
+      <div class="btn-row">
+        <button class="btn-primary" id="makePromptBtn">Create AI prompt</button>
+        <button class="btn-blue" id="showAllIvsBtn">Show all IVs anyway</button>
+      </div>
+
+      <div id="ivStatus" class="status hidden"></div>
+    </section>
+
+    <section id="tab-prompt" class="tab panel hidden">
+      <h2>4. Copy this prompt into an AI</h2>
+      <p class="small">The AI should respond in valid JSON only. The program will import that JSON in the next step.</p>
+
+      <div id="promptBox" class="prompt-box">Choose IA type, DV, and IV first.</div>
+
+      <div class="btn-row">
+        <button class="btn-primary" id="copyPromptBtn">Copy prompt</button>
+        <button class="btn-blue" id="goImportBtn">Go to paste response</button>
+      </div>
+    </section>
+
+    <section id="tab-import" class="tab panel hidden">
+      <h2>5. Paste the AI response</h2>
+      <p class="small">Paste the JSON response from the AI below. If the AI added a markdown code block, the program will try to clean it automatically.</p>
+
+      <label for="aiResponse">AI JSON response</label>
+      <textarea id="aiResponse" placeholder="{ ... }"></textarea>
+
+      <div class="btn-row">
+        <button class="btn-primary" id="importBtn">Import response</button>
+        <button class="btn-secondary" id="sampleBtn">Load sample response</button>
+      </div>
+
+      <div id="importStatus" class="status hidden"></div>
+    </section>
+
+    <section id="tab-edit" class="tab panel hidden">
+      <h2>6. Edit the proposal fields</h2>
+      <p class="small">Students should replace general AI suggestions with specific local details before exporting.</p>
+
+      <div class="grid">
+        <div class="field-card">
+          <h3>Core idea</h3>
+
+          <label for="strengthInput">Strength</label>
+          <select id="strengthInput">
+            <option>Strong</option>
+            <option>Possible</option>
+            <option>Weak</option>
+            <option>Invalid</option>
+          </select>
+
+          <label for="environmentalIssueInput">Environmental issue</label>
+          <textarea id="environmentalIssueInput"></textarea>
+
+          <label for="rqInput">Research question</label>
+          <textarea id="rqInput"></textarea>
+
+          <label for="locationInput">Location/context</label>
+          <textarea id="locationInput"></textarea>
+        </div>
+
+        <div class="field-card">
+          <h3>Variables</h3>
+
+          <label for="ivNameInput">IV name</label>
+          <input id="ivNameInput" />
+
+          <label for="ivUnitInput">IV unit/categories</label>
+          <input id="ivUnitInput" />
+
+          <label>IV range/categories</label>
+          <div id="rangeList" class="list-editor"></div>
+          <button class="btn-secondary" onclick="addListItem('rangeList')">Add range item</button>
+
+          <label for="dvNameInput">DV name</label>
+          <input id="dvNameInput" />
+
+          <label for="dvUnitInput">DV unit</label>
+          <input id="dvUnitInput" />
+
+          <label for="measurementInput">Measurement method</label>
+          <textarea id="measurementInput"></textarea>
+        </div>
+
+        <div class="field-card">
+          <h3>Method</h3>
+
+          <label for="iaTypeInput">IA type</label>
+          <input id="iaTypeInput" />
+
+          <label for="samplingInput">Sampling strategy</label>
+          <textarea id="samplingInput"></textarea>
+
+          <label for="repeatsInput">Repeats/sample size</label>
+          <textarea id="repeatsInput"></textarea>
+
+          <label>Procedure summary</label>
+          <div id="procedureList" class="list-editor"></div>
+          <button class="btn-secondary" onclick="addListItem('procedureList')">Add procedure step</button>
+        </div>
+
+        <div class="field-card">
+          <h3>Practical details</h3>
+
+          <label>Control variables</label>
+          <div id="controlsList" class="list-editor"></div>
+          <button class="btn-secondary" onclick="addListItem('controlsList')">Add control</button>
+
+          <label>Equipment</label>
+          <div id="equipmentList" class="list-editor"></div>
+          <button class="btn-secondary" onclick="addListItem('equipmentList')">Add equipment</button>
+
+          <label>Limitations/warnings</label>
+          <div id="warningsList" class="list-editor"></div>
+          <button class="btn-secondary" onclick="addListItem('warningsList')">Add warning</button>
+        </div>
+
+        <div class="field-card">
+          <h3>Feasibility</h3>
+
+          <label for="easeInput">Ease</label>
+          <select id="easeInput">
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+          </select>
+
+          <label for="easeWhyInput">Why</label>
+          <textarea id="easeWhyInput"></textarea>
+        </div>
+
+        <div class="field-card">
+          <h3>Student details</h3>
+
+          <label for="studentNameInput">Student name</label>
+          <input id="studentNameInput" placeholder="Optional" />
+
+          <label for="classInput">Class</label>
+          <input id="classInput" placeholder="Optional, e.g. DP1 ESS" />
+
+          <div class="btn-row">
+            <button class="btn-primary" id="updatePreviewBtn">Update preview</button>
+            <button class="btn-blue" id="goExportBtn">Go to export</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-export" class="tab panel hidden">
+      <h2>7. Export proposal</h2>
+      <p class="small">Check the preview. Then export as a PNG to show the teacher.</p>
+
+      <div class="btn-row">
+        <button class="btn-primary" id="exportPngBtn">Export PNG</button>
+        <button class="btn-secondary" id="copyProposalBtn">Copy proposal text</button>
+      </div>
+
+      <div id="qualityStatus"></div>
+
+      <br>
+
+      <div id="proposalCard" class="proposal-card"></div>
+    </section>
+  </main>
+
+  <script>
+    let iaData = null;
+    let selectedDv = null;
+    let selectedIv = null;
+    let currentIvRecommendations = [];
+    let currentPrompt = "";
+    let proposal = null;
+
+    const fieldIds = {
+      strength: "strengthInput",
+      environmental_issue: "environmentalIssueInput",
+      research_question: "rqInput",
+      location_context: "locationInput",
+      iv_name: "ivNameInput",
+      iv_unit: "ivUnitInput",
+      dv_name: "dvNameInput",
+      dv_unit: "dvUnitInput",
+      measurement_method: "measurementInput",
+      ia_type: "iaTypeInput",
+      sampling_strategy: "samplingInput",
+      repeats_or_sample_size: "repeatsInput",
+      ease: "easeInput",
+      ease_why: "easeWhyInput",
+      student_name: "studentNameInput",
+      class_name: "classInput"
+    };
+
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => showTab(btn.dataset.tab));
+    });
+
+    function showTab(name) {
+      document.querySelectorAll(".tab").forEach(tab => tab.classList.add("hidden"));
+      document.getElementById(`tab-${name}`).classList.remove("hidden");
+      document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+      document.querySelector(`[data-tab="${name}"]`).classList.add("active");
+    }
+
+    async function loadData() {
+      try {
+        const response = await fetch("ia_data.json");
+        iaData = await response.json();
+      } catch (e) {
+        document.getElementById("typeInfo").className = "status danger";
+        document.getElementById("typeInfo").textContent =
+          "Could not load ia_data.json. Use the included .bat file or run: python -m http.server 8000";
+        return;
+      }
+
+      populateSelect("iaTypeSelect", iaData.ia_types);
+      updateTypeInfo();
+    }
+
+    function populateSelect(id, values) {
+      const select = document.getElementById(id);
+      select.innerHTML = "";
+      values.forEach(value => {
+        const opt = document.createElement("option");
+        opt.value = value;
+        opt.textContent = value;
+        select.appendChild(opt);
+      });
+    }
+
+    function getSelectedIaType() {
+      return document.getElementById("iaTypeSelect").value;
+    }
+
+    function updateTypeInfo() {
+      const type = getSelectedIaType();
+      const filtered = iaData ? iaData.dependent_variables.filter(dv => (dv.compatible_ia_types || []).includes(type)) : [];
+      document.getElementById("typeInfo").innerHTML = `
+        <strong>${escapeHtml(type)}</strong><br>
+        <span class="small">${filtered.length} compatible DVs available. Next, choose a DV grouped by topic.</span>
+      `;
+    }
+
+    function showDvsByTopic() {
+      selectedDv = null;
+      renderDvGroups();
+      showTab("dv");
+    }
+
+    function getFilteredDvs() {
+      const type = getSelectedIaType();
+      const query = document.getElementById("dvSearch")?.value.trim().toLowerCase() || "";
+      return iaData.dependent_variables
+        .filter(dv => (dv.compatible_ia_types || []).includes(type))
+        .filter(dv => {
+          const text = JSON.stringify(dv).toLowerCase();
+          return !query || text.includes(query);
+        })
+        .sort((a, b) => (a.topic || "").localeCompare(b.topic || "") || a.name.localeCompare(b.name));
+    }
+
+    function groupBy(items, key) {
+      return items.reduce((acc, item) => {
+        const group = item[key] || "Other";
+        if (!acc[group]) acc[group] = [];
+        acc[group].push(item);
+        return acc;
+      }, {});
+    }
+
+    function renderDvGroups() {
+      const groups = groupBy(getFilteredDvs(), "topic");
+      const container = document.getElementById("dvGroups");
+
+      if (!Object.keys(groups).length) {
+        container.innerHTML = `<div class="status warn">No matching DVs for this IA type/search.</div>`;
+        return;
+      }
+
+      container.innerHTML = Object.entries(groups).map(([topic, dvs]) => `
+        <section class="topic-block">
+          <h3 class="topic-title">${escapeHtml(topic)}</h3>
+          <div class="choice-grid">
+            ${dvs.map(dv => `
+              <article class="choice-card ${selectedDv && selectedDv.name === dv.name ? "selected" : ""}" onclick="selectDv('${escapeAttr(dv.name)}')">
+                <h3>${escapeHtml(dv.name)}</h3>
+                <div>
+                  <span class="tag blue">${escapeHtml(dv.category)}</span>
+                  <span class="tag">${escapeHtml(dv.unit || "unit needed")}</span>
+                </div>
+                <p class="small"><strong>Equipment:</strong> ${(dv.equipment || []).map(escapeHtml).join(", ")}</p>
+              </article>
+            `).join("")}
+          </div>
+        </section>
+      `).join("");
+    }
+
+    function selectDv(name) {
+      selectedDv = iaData.dependent_variables.find(dv => dv.name === name);
+      renderDvGroups();
+      const status = document.getElementById("dvStatus");
+      status.className = "status ok";
+      status.classList.remove("hidden");
+      status.textContent = `Selected DV: ${selectedDv.name}.`;
+    }
+
+    function recommendIvs(showAll = false) {
+      if (!selectedDv) {
+        const status = document.getElementById("dvStatus");
+        status.className = "status warn";
+        status.classList.remove("hidden");
+        status.textContent = "Choose a DV first.";
+        return;
+      }
+
+      selectedIv = null;
+      const iaType = getSelectedIaType();
+
+      let recommendations = iaData.independent_variables.map(iv => {
+        const tagOverlap = (iv.tags || []).filter(tag => (selectedDv.tags || []).includes(tag));
+        const ivTypeMatch = (iv.compatible_ia_types || []).includes(iaType);
+        let score = tagOverlap.length * 2 + (ivTypeMatch ? 4 : -4);
+
+        let label = "Weak";
+        if (score >= 8) label = "Strong";
+        else if (score >= 5) label = "Possible";
+
+        return { iv, score, label, tagOverlap, ivTypeMatch };
+      });
+
+      if (!showAll) {
+        recommendations = recommendations.filter(r => r.score >= 5);
+      }
+
+      recommendations.sort((a, b) => b.score - a.score || a.iv.name.localeCompare(b.iv.name));
+      currentIvRecommendations = recommendations;
+
+      document.getElementById("recommendationSummary").innerHTML = `
+        <strong>Selected IA type:</strong> ${escapeHtml(iaType)}<br>
+        <strong>Selected DV:</strong> ${escapeHtml(selectedDv.name)} (${escapeHtml(selectedDv.unit || "")})<br>
+        <span class="small">DV tags: ${(selectedDv.tags || []).map(escapeHtml).join(", ")}</span>
+      `;
+
+      renderIvCards();
+      showTab("iv");
+    }
+
+    function renderIvCards() {
+      const query = document.getElementById("ivSearch").value.trim().toLowerCase();
+      const filtered = currentIvRecommendations.filter(r => {
+        const text = JSON.stringify(r.iv).toLowerCase() + " " + r.label.toLowerCase();
+        return !query || text.includes(query);
+      });
+
+      const grid = document.getElementById("ivGrid");
+
+      if (!filtered.length) {
+        grid.innerHTML = `<div class="status warn">No matching IVs. Try showing all IVs or choosing another DV.</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(r => {
+        const overlapText = r.tagOverlap.length ? r.tagOverlap.join(", ") : "no direct tag overlap";
+        return `
+          <article class="choice-card ${selectedIv && selectedIv.name === r.iv.name ? "selected" : ""}" onclick="selectIv('${escapeAttr(r.iv.name)}')">
+            <h3>${escapeHtml(r.iv.name)}</h3>
+            <div>
+              <span class="tag blue">${escapeHtml(r.iv.category)}</span>
+              <span class="tag ${r.label === "Weak" ? "warning" : ""}">${escapeHtml(r.label)} match</span>
+            </div>
+            <p class="small"><strong>Topic:</strong> ${escapeHtml(r.iv.topic || "")}</p>
+            <p class="small"><strong>Why:</strong> ${escapeHtml(overlapText)}</p>
+            <p class="small"><strong>Typical range:</strong> ${(r.iv.default_range || []).map(escapeHtml).join(", ")}</p>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function selectIv(name) {
+      selectedIv = iaData.independent_variables.find(iv => iv.name === name);
+      renderIvCards();
+      const status = document.getElementById("ivStatus");
+      status.className = "status ok";
+      status.classList.remove("hidden");
+      status.textContent = `Selected IV: ${selectedIv.name}.`;
+    }
+
+    function buildPrompt() {
+      const iaType = getSelectedIaType();
+      const dv = selectedDv;
+      const iv = selectedIv;
+
+      return `You are helping an IB ESS student design a feasible Internal Assessment proposal.
+
+The student has selected:
+- IA type: ${iaType}
+- Dependent variable: ${dv.name}
+- Dependent variable topic: ${dv.topic}
+- Dependent variable unit: ${dv.unit || ""}
+- Independent variable: ${iv.name}
+- Independent variable category: ${iv.category}
+- Suggested IV range/categories from teacher database: ${(iv.default_range || []).join(", ")}
+
+Relevant tags:
+- DV tags: ${(dv.tags || []).join(", ")}
+- IV tags: ${(iv.tags || []).join(", ")}
+
+Your task:
+Create a feasible ESS IA design based on these choices.
+
+You should decide:
+- environmental issue
+- possible location/context ideas
+- equipment
+- range/categories for the IV
+- sampling strategy
+- repeats/sample size
+- control variables
+- basic procedure summary
+- feasibility/ease
+- limitations/warnings
+
+Do NOT include:
+- data analysis
+- improvements
+- full IA writing
+- long textbook explanations
+
+Important rules:
+- Keep the investigation realistic for a school student.
+- Use measurable variables.
+- Do not assume advanced equipment unless necessary.
+- Use the teacher database range if it is suitable, but adjust it if needed.
+- If the IV/DV/IA type combination is weak or invalid, mark the strength as "Weak" or "Invalid" and explain the problem in the limitations/warnings.
+- The student will later edit your suggestions, so give practical starting points.
+- Respond in valid JSON only.
+- Do not use markdown.
+- Do not add extra fields.
+
+Return exactly this JSON structure:
+
+{
+  "strength": "Strong / Possible / Weak / Invalid",
+  "environmental_issue": "",
+  "research_question": "",
+  "location_context": "",
+  "independent_variable": {
+    "name": "",
+    "unit_or_categories": "",
+    "suggested_range": []
+  },
+  "dependent_variable": {
+    "name": "",
+    "unit": "",
+    "measurement_method": ""
+  },
+  "ia_type": "",
+  "sampling_strategy": "",
+  "repeats_or_sample_size": "",
+  "control_variables": [],
+  "equipment": [],
+  "procedure_summary": [],
+  "feasibility": {
+    "ease": "Easy / Medium / Hard",
+    "why": ""
+  },
+  "limitations_or_warnings": []
+}`;
+    }
+
+    function createPrompt() {
+      if (!selectedDv || !selectedIv) {
+        const status = document.getElementById("ivStatus");
+        status.className = "status warn";
+        status.classList.remove("hidden");
+        status.textContent = "Choose a DV and IV first.";
+        return;
+      }
+
+      currentPrompt = buildPrompt();
+      document.getElementById("promptBox").textContent = currentPrompt;
+      showTab("prompt");
+    }
+
+    async function copyText(text) {
+      await navigator.clipboard.writeText(text);
+    }
+
+    function cleanJsonText(text) {
+      let cleaned = text.trim();
+
+      if (cleaned.startsWith("```")) {
+        cleaned = cleaned.replace(/^```json\s*/i, "");
+        cleaned = cleaned.replace(/^```\s*/i, "");
+        cleaned = cleaned.replace(/```\s*$/i, "");
+      }
+
+      const first = cleaned.indexOf("{");
+      const last = cleaned.lastIndexOf("}");
+      if (first !== -1 && last !== -1) {
+        cleaned = cleaned.slice(first, last + 1);
+      }
+
+      return cleaned;
+    }
+
+    function importResponse() {
+      const raw = document.getElementById("aiResponse").value;
+      const status = document.getElementById("importStatus");
+
+      try {
+        const parsed = JSON.parse(cleanJsonText(raw));
+        proposal = normalizeProposal(parsed);
+        fillEditFields(proposal);
+        status.className = "status ok";
+        status.classList.remove("hidden");
+        status.textContent = "Imported successfully. You can now edit the proposal fields.";
+        renderProposalCard();
+        showTab("edit");
+      } catch (e) {
+        status.className = "status danger";
+        status.classList.remove("hidden");
+        status.innerHTML = "Could not import the response. Ask the AI to return valid JSON only using the exact structure.";
+      }
+    }
+
+    function normalizeProposal(data) {
+      const iaType = getSelectedIaType();
+      const dv = selectedDv || {};
+      const iv = selectedIv || {};
+
+      return {
+        strength: data.strength || "Possible",
+        environmental_issue: data.environmental_issue || "",
+        research_question: data.research_question || "",
+        location_context: data.location_context || "",
+        independent_variable: {
+          name: data.independent_variable?.name || iv.name || "",
+          unit_or_categories: data.independent_variable?.unit_or_categories || iv.category || "",
+          suggested_range: data.independent_variable?.suggested_range || iv.default_range || []
+        },
+        dependent_variable: {
+          name: data.dependent_variable?.name || dv.name || "",
+          unit: data.dependent_variable?.unit || dv.unit || "",
+          measurement_method: data.dependent_variable?.measurement_method || ""
+        },
+        ia_type: data.ia_type || iaType,
+        sampling_strategy: data.sampling_strategy || "",
+        repeats_or_sample_size: data.repeats_or_sample_size || "",
+        control_variables: data.control_variables || [],
+        equipment: data.equipment || dv.equipment || [],
+        procedure_summary: data.procedure_summary || [],
+        feasibility: {
+          ease: data.feasibility?.ease || "Medium",
+          why: data.feasibility?.why || ""
+        },
+        limitations_or_warnings: data.limitations_or_warnings || [],
+        student_name: "",
+        class_name: ""
+      };
+    }
+
+    function fillEditFields(p) {
+      document.getElementById(fieldIds.strength).value = p.strength;
+      document.getElementById(fieldIds.environmental_issue).value = p.environmental_issue;
+      document.getElementById(fieldIds.research_question).value = p.research_question;
+      document.getElementById(fieldIds.location_context).value = p.location_context;
+      document.getElementById(fieldIds.iv_name).value = p.independent_variable.name;
+      document.getElementById(fieldIds.iv_unit).value = p.independent_variable.unit_or_categories;
+      document.getElementById(fieldIds.dv_name).value = p.dependent_variable.name;
+      document.getElementById(fieldIds.dv_unit).value = p.dependent_variable.unit;
+      document.getElementById(fieldIds.measurement_method).value = p.dependent_variable.measurement_method;
+      document.getElementById(fieldIds.ia_type).value = p.ia_type;
+      document.getElementById(fieldIds.sampling_strategy).value = p.sampling_strategy;
+      document.getElementById(fieldIds.repeats_or_sample_size).value = p.repeats_or_sample_size;
+      document.getElementById(fieldIds.ease).value = ["Easy", "Medium", "Hard"].includes(p.feasibility.ease) ? p.feasibility.ease : "Medium";
+      document.getElementById(fieldIds.ease_why).value = p.feasibility.why;
+
+      setList("rangeList", p.independent_variable.suggested_range);
+      setList("controlsList", p.control_variables);
+      setList("equipmentList", p.equipment);
+      setList("procedureList", p.procedure_summary);
+      setList("warningsList", p.limitations_or_warnings);
+    }
+
+    function readEditFields() {
+      proposal = {
+        strength: document.getElementById(fieldIds.strength).value,
+        environmental_issue: document.getElementById(fieldIds.environmental_issue).value,
+        research_question: document.getElementById(fieldIds.research_question).value,
+        location_context: document.getElementById(fieldIds.location_context).value,
+        independent_variable: {
+          name: document.getElementById(fieldIds.iv_name).value,
+          unit_or_categories: document.getElementById(fieldIds.iv_unit).value,
+          suggested_range: getList("rangeList")
+        },
+        dependent_variable: {
+          name: document.getElementById(fieldIds.dv_name).value,
+          unit: document.getElementById(fieldIds.dv_unit).value,
+          measurement_method: document.getElementById(fieldIds.measurement_method).value
+        },
+        ia_type: document.getElementById(fieldIds.ia_type).value,
+        sampling_strategy: document.getElementById(fieldIds.sampling_strategy).value,
+        repeats_or_sample_size: document.getElementById(fieldIds.repeats_or_sample_size).value,
+        control_variables: getList("controlsList"),
+        equipment: getList("equipmentList"),
+        procedure_summary: getList("procedureList"),
+        feasibility: {
+          ease: document.getElementById(fieldIds.ease).value,
+          why: document.getElementById(fieldIds.ease_why).value
+        },
+        limitations_or_warnings: getList("warningsList"),
+        student_name: document.getElementById(fieldIds.student_name).value,
+        class_name: document.getElementById(fieldIds.class_name).value
+      };
+      return proposal;
+    }
+
+    function setList(id, items) {
+      const container = document.getElementById(id);
+      container.innerHTML = "";
+      (items || []).forEach(item => addListItem(id, item));
+      if (!items || items.length === 0) addListItem(id, "");
+    }
+
+    function addListItem(id, value = "") {
+      const container = document.getElementById(id);
+      const row = document.createElement("div");
+      row.className = "list-row";
+      row.innerHTML = `
+        <input value="${escapeHtml(value)}" />
+        <button type="button" class="btn-danger">Remove</button>
+      `;
+      row.querySelector("button").addEventListener("click", () => row.remove());
+      container.appendChild(row);
+    }
+
+    function getList(id) {
+      return [...document.querySelectorAll(`#${id} input`)]
+        .map(input => input.value.trim())
+        .filter(Boolean);
+    }
+
+    function escapeHtml(str) {
+      return String(str || "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function escapeAttr(str) {
+      return escapeHtml(str).replaceAll("`", "&#096;");
+    }
+
+    function makeList(items) {
+      if (!items || !items.length) return "<p class='small'>Not specified</p>";
+      return `<ul>${items.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+    }
+
+    function qualityChecks(p) {
+      const checks = [];
+      checks.push({
+        ok: !!p.environmental_issue && p.environmental_issue.length > 35,
+        text: "Environmental issue is clear enough."
+      });
+      checks.push({
+        ok: !!p.research_question && p.research_question.includes("?"),
+        text: "Research question is written as a question."
+      });
+      checks.push({
+        ok: p.independent_variable.suggested_range.length >= 5 || p.ia_type.toLowerCase().includes("survey"),
+        text: "IV range has 5 levels/categories, or survey sample size is more relevant."
+      });
+      checks.push({
+        ok: p.control_variables.length >= 4,
+        text: "At least 4 control variables are included."
+      });
+      checks.push({
+        ok: !!p.repeats_or_sample_size && (p.repeats_or_sample_size.includes("5") || p.repeats_or_sample_size.includes("30") || p.repeats_or_sample_size.length > 10),
+        text: "Repeats or sample size are stated."
+      });
+      checks.push({
+        ok: p.equipment.length >= 2,
+        text: "Equipment list is specific enough."
+      });
+      checks.push({
+        ok: p.strength !== "Invalid",
+        text: "AI did not mark the idea as invalid."
+      });
+      return checks;
+    }
+
+    function renderQuality(p) {
+      const checks = qualityChecks(p);
+      const warningCount = checks.filter(c => !c.ok).length;
+      document.getElementById("qualityStatus").innerHTML = `
+        <div class="${warningCount ? "status warn" : "status ok"}">
+          Quality checker: ${warningCount ? `${warningCount} item(s) may need attention.` : "Looks ready for teacher review."}
+        </div>
+      `;
+    }
+
+    function renderProposalCard() {
+      const p = readEditFields();
+      renderQuality(p);
+
+      const studentLine = [p.student_name, p.class_name].filter(Boolean).join(" | ");
+      const card = document.getElementById("proposalCard");
+
+      card.innerHTML = `
+        <h2>ESS IA Proposal</h2>
+        ${studentLine ? `<p class="small"><strong>${escapeHtml(studentLine)}</strong></p>` : ""}
+        <p>
+          <span class="tag ${p.strength === "Weak" || p.strength === "Invalid" ? "warning" : ""}">Strength: ${escapeHtml(p.strength)}</span>
+          <span class="tag blue">${escapeHtml(p.ia_type)}</span>
+          <span class="tag">${escapeHtml(p.feasibility.ease)}</span>
+        </p>
+
+        <div class="proposal-section">
+          <h3>Research Question</h3>
+          <p>${escapeHtml(p.research_question)}</p>
+        </div>
+
+        <div class="proposal-section">
+          <h3>Environmental Issue</h3>
+          <p>${escapeHtml(p.environmental_issue)}</p>
+        </div>
+
+        <div class="proposal-section">
+          <h3>Location / Context</h3>
+          <p>${escapeHtml(p.location_context)}</p>
+        </div>
+
+        <div class="proposal-grid">
+          <div class="proposal-section">
+            <h3>Independent Variable</h3>
+            <p><strong>${escapeHtml(p.independent_variable.name)}</strong></p>
+            <p class="small">${escapeHtml(p.independent_variable.unit_or_categories)}</p>
+            ${makeList(p.independent_variable.suggested_range)}
+          </div>
+
+          <div class="proposal-section">
+            <h3>Dependent Variable</h3>
+            <p><strong>${escapeHtml(p.dependent_variable.name)}</strong></p>
+            <p class="small">Unit: ${escapeHtml(p.dependent_variable.unit)}</p>
+            <p>${escapeHtml(p.dependent_variable.measurement_method)}</p>
+          </div>
+        </div>
+
+        <div class="proposal-grid">
+          <div class="proposal-section">
+            <h3>Sampling Strategy</h3>
+            <p>${escapeHtml(p.sampling_strategy)}</p>
+            <p><strong>Repeats/sample size:</strong> ${escapeHtml(p.repeats_or_sample_size)}</p>
+          </div>
+
+          <div class="proposal-section">
+            <h3>Feasibility</h3>
+            <p><strong>${escapeHtml(p.feasibility.ease)}:</strong> ${escapeHtml(p.feasibility.why)}</p>
+          </div>
+        </div>
+
+        <div class="proposal-grid">
+          <div class="proposal-section">
+            <h3>Control Variables</h3>
+            ${makeList(p.control_variables)}
+          </div>
+
+          <div class="proposal-section">
+            <h3>Equipment</h3>
+            ${makeList(p.equipment)}
+          </div>
+        </div>
+
+        <div class="proposal-section">
+          <h3>Procedure Summary</h3>
+          ${makeList(p.procedure_summary)}
+        </div>
+
+        <div class="proposal-section">
+          <h3>Limitations / Warnings</h3>
+          ${makeList(p.limitations_or_warnings)}
+        </div>
+
+        <div class="teacher-box">
+          <strong>Teacher feedback:</strong>
+          <p>☐ Approved &nbsp;&nbsp; ☐ Approved with changes &nbsp;&nbsp; ☐ Revise and resubmit</p>
+          <p>Main issue to fix: ________________________________________________</p>
+        </div>
+      `;
+    }
+
+    function proposalText() {
+      const p = readEditFields();
+      return `ESS IA Proposal
+
+Student: ${p.student_name}
+Class: ${p.class_name}
+Strength: ${p.strength}
+IA type: ${p.ia_type}
+
+Research Question:
+${p.research_question}
+
+Environmental Issue:
+${p.environmental_issue}
+
+Location / Context:
+${p.location_context}
+
+Independent Variable:
+${p.independent_variable.name}
+${p.independent_variable.unit_or_categories}
+Range/categories: ${p.independent_variable.suggested_range.join(", ")}
+
+Dependent Variable:
+${p.dependent_variable.name}
+Unit: ${p.dependent_variable.unit}
+Measurement method: ${p.dependent_variable.measurement_method}
+
+Sampling Strategy:
+${p.sampling_strategy}
+
+Repeats/sample size:
+${p.repeats_or_sample_size}
+
+Control Variables:
+${p.control_variables.map(x => "- " + x).join("\n")}
+
+Equipment:
+${p.equipment.map(x => "- " + x).join("\n")}
+
+Procedure Summary:
+${p.procedure_summary.map((x, i) => `${i + 1}. ${x}`).join("\n")}
+
+Feasibility:
+${p.feasibility.ease}: ${p.feasibility.why}
+
+Limitations / Warnings:
+${p.limitations_or_warnings.map(x => "- " + x).join("\n")}`;
+    }
+
+    async function exportPng() {
+      renderProposalCard();
+      const node = document.getElementById("proposalCard");
+
+      const canvas = await html2canvas(node, {
+        scale: 2,
+        backgroundColor: "#ffffff",
+        useCORS: true
+      });
+
+      const link = document.createElement("a");
+      link.download = "ess-ia-proposal.png";
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    }
+
+    function sampleResponse() {
+      const iaType = getSelectedIaType();
+      const dv = selectedDv || iaData.dependent_variables.find(d => (d.compatible_ia_types || []).includes(iaType)) || iaData.dependent_variables[0];
+      const iv = selectedIv || iaData.independent_variables.find(i => (i.compatible_ia_types || []).includes(iaType)) || iaData.independent_variables[0];
+
+      const sample = {
+        "strength": "Strong",
+        "environmental_issue": "This investigation connects to an environmental issue because changes in the selected independent variable may affect environmental quality or ecosystem conditions.",
+        "research_question": `How does ${iv.name.toLowerCase()} affect ${dv.name.toLowerCase()} in a local study area?`,
+        "location_context": "A safe school campus, local park, road edge, water edge, or other accessible local area chosen by the student.",
+        "independent_variable": {
+          "name": iv.name,
+          "unit_or_categories": iv.category,
+          "suggested_range": iv.default_range || []
+        },
+        "dependent_variable": {
+          "name": dv.name,
+          "unit": dv.unit || "",
+          "measurement_method": `Measure ${dv.name.toLowerCase()} using appropriate school-level equipment.`
+        },
+        "ia_type": iaType,
+        "sampling_strategy": "Use a sampling strategy that matches the IV, such as systematic sampling for a gradient or stratified sampling for categories.",
+        "repeats_or_sample_size": "Use 5 repeats per IV level/category where possible.",
+        "control_variables": [
+          "same time of day",
+          "same equipment",
+          "same measurement duration",
+          "similar weather conditions",
+          "same measurement technique"
+        ],
+        "equipment": dv.equipment || ["data table", "spreadsheet"],
+        "procedure_summary": [
+          "Choose a safe and accessible study location.",
+          "Set up the IV levels or categories.",
+          "Measure the DV using the same method at each IV level.",
+          "Repeat measurements to improve reliability.",
+          "Record relevant observations that may affect the results."
+        ],
+        "feasibility": {
+          "ease": "Medium",
+          "why": "The idea is feasible if the student has access to the required location and equipment."
+        },
+        "limitations_or_warnings": [
+          "Uncontrolled environmental conditions may affect results.",
+          "The student should choose a safe location.",
+          "The method needs enough repeats to be reliable."
+        ]
+      };
+
+      document.getElementById("aiResponse").value = JSON.stringify(sample, null, 2);
+    }
+
+    document.getElementById("iaTypeSelect").addEventListener("change", updateTypeInfo);
+    document.getElementById("showDvsBtn").addEventListener("click", showDvsByTopic);
+    document.getElementById("dvSearch").addEventListener("input", renderDvGroups);
+    document.getElementById("recommendIvsBtn").addEventListener("click", () => recommendIvs(false));
+    document.getElementById("ivSearch").addEventListener("input", renderIvCards);
+    document.getElementById("showAllIvsBtn").addEventListener("click", () => recommendIvs(true));
+    document.getElementById("makePromptBtn").addEventListener("click", createPrompt);
+    document.getElementById("copyPromptBtn").addEventListener("click", async () => {
+      await copyText(currentPrompt || document.getElementById("promptBox").textContent);
+      alert("Prompt copied.");
+    });
+    document.getElementById("goImportBtn").addEventListener("click", () => showTab("import"));
+    document.getElementById("importBtn").addEventListener("click", importResponse);
+    document.getElementById("sampleBtn").addEventListener("click", sampleResponse);
+    document.getElementById("updatePreviewBtn").addEventListener("click", () => {
+      renderProposalCard();
+      alert("Preview updated.");
+    });
+    document.getElementById("goExportBtn").addEventListener("click", () => {
+      renderProposalCard();
+      showTab("export");
+    });
+    document.getElementById("exportPngBtn").addEventListener("click", exportPng);
+    document.getElementById("copyProposalBtn").addEventListener("click", async () => {
+      await copyText(proposalText());
+      alert("Proposal text copied.");
+    });
+
+    loadData();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</body>
+</html>
