@@ -2571,6 +2571,423 @@
         "% of land area"
       ],
       "notes": "Useful for food systems, land use, water stress, or emissions studies."
+    },
+    {
+      "name": "Distance from windbreak",
+      "topic": "Microclimate / urban systems",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "wind",
+        "microclimate",
+        "temperature",
+        "air pollution",
+        "vegetation",
+        "urban"
+      ],
+      "default_range": [
+        "0 m",
+        "2 m",
+        "5 m",
+        "10 m",
+        "20 m"
+      ],
+      "notes": "Good for testing whether trees, hedges, walls, or buildings reduce wind speed or change local microclimate."
+    },
+    {
+      "name": "Windbreak presence",
+      "topic": "Microclimate / urban systems",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "wind",
+        "microclimate",
+        "vegetation",
+        "urban",
+        "air pollution"
+      ],
+      "default_range": [
+        "no windbreak",
+        "wall",
+        "hedge",
+        "tree line",
+        "building shelter"
+      ],
+      "notes": "Useful when measuring wind speed, temperature, or PM concentration in sheltered and unsheltered areas."
+    },
+    {
+      "name": "Slope angle",
+      "topic": "Soil quality / vegetation",
+      "category": "Gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "slope",
+        "soil",
+        "moisture",
+        "infiltration",
+        "vegetation",
+        "runoff"
+      ],
+      "default_range": [
+        "0–5°",
+        "6–10°",
+        "11–15°",
+        "16–20°",
+        "21°+"
+      ],
+      "notes": "Good for soil moisture, infiltration, runoff evidence, vegetation cover, or plant abundance."
+    },
+    {
+      "name": "Rainfall amount before sampling",
+      "topic": "Water / soil / weather",
+      "category": "Weather / time",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Secondary data"
+      ],
+      "tags": [
+        "rainfall",
+        "water",
+        "soil moisture",
+        "runoff",
+        "turbidity",
+        "infiltration"
+      ],
+      "default_range": [
+        "0 mm",
+        "1–5 mm",
+        "6–10 mm",
+        "11–20 mm",
+        "20+ mm"
+      ],
+      "notes": "Usually better as context or a secondary-data IV. Good for turbidity, stream flow, soil moisture, or runoff investigations."
+    },
+    {
+      "name": "Presence of green wall",
+      "topic": "Urban systems / air pollution",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Survey"
+      ],
+      "tags": [
+        "green wall",
+        "air pollution",
+        "temperature",
+        "urban",
+        "vegetation",
+        "green space",
+        "attitudes",
+        "survey"
+      ],
+      "default_range": [
+        "no green wall",
+        "small green wall",
+        "medium green wall",
+        "large green wall",
+        "dense green wall"
+      ],
+      "notes": "Good for PM2.5, PM10, temperature, or public support investigations."
+    },
+    {
+      "name": "Distance from green wall",
+      "topic": "Urban systems / air pollution",
+      "category": "Distance / gradient",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "green wall",
+        "air pollution",
+        "temperature",
+        "urban",
+        "vegetation",
+        "microclimate"
+      ],
+      "default_range": [
+        "0 m",
+        "1 m",
+        "3 m",
+        "5 m",
+        "10 m"
+      ],
+      "notes": "Good for testing whether green walls affect PM concentration, surface temperature, or air temperature nearby."
+    },
+    {
+      "name": "Presence of pedestrianized area",
+      "topic": "Urban systems / transport",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Survey"
+      ],
+      "tags": [
+        "air pollution",
+        "traffic",
+        "urban",
+        "transport",
+        "pedestrian",
+        "human behavior",
+        "survey"
+      ],
+      "default_range": [
+        "busy road",
+        "low traffic street",
+        "shared street",
+        "pedestrianized street",
+        "park path"
+      ],
+      "notes": "Good for PM2.5, PM10, noise, traffic count, or public support for pedestrian town centers."
+    },
+    {
+      "name": "Permeability of ground material",
+      "topic": "Urban systems / runoff",
+      "category": "Category / site comparison",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "surface",
+        "runoff",
+        "infiltration",
+        "temperature",
+        "urban",
+        "water"
+      ],
+      "default_range": [
+        "concrete",
+        "asphalt",
+        "permeable concrete",
+        "bare soil",
+        "grass"
+      ],
+      "notes": "Good for comparing infiltration rate, runoff, soil moisture nearby, or surface temperature."
+    },
+    {
+      "name": "Soil amendment type",
+      "topic": "Lab / soil",
+      "category": "Treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "agriculture",
+        "plant growth",
+        "nutrients",
+        "pH",
+        "compost",
+        "sustainability"
+      ],
+      "default_range": [
+        "none",
+        "compost",
+        "lime",
+        "green manure",
+        "organic fertilizer"
+      ],
+      "notes": "Good for comparing soil pH, soil nutrients, water retention, germination, or plant growth."
+    },
+    {
+      "name": "Lime amount added to soil",
+      "topic": "Lab / soil pH",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "pH",
+        "agriculture",
+        "plant growth",
+        "liming"
+      ],
+      "default_range": [
+        "0 g",
+        "1 g",
+        "2 g",
+        "4 g",
+        "8 g"
+      ],
+      "notes": "Good for testing how liming affects soil pH or plant growth. The lime amount should be scaled to the mass of soil used."
+    },
+    {
+      "name": "Green manure percentage",
+      "topic": "Lab / sustainable agriculture",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "agriculture",
+        "plant growth",
+        "nutrients",
+        "sustainability",
+        "green manure"
+      ],
+      "default_range": [
+        "0%",
+        "5%",
+        "10%",
+        "20%",
+        "40%"
+      ],
+      "notes": "Possible for plant growth or soil nutrient investigations, but students need enough time for decomposition effects."
+    },
+    {
+      "name": "Hydroponic nutrient concentration",
+      "topic": "Lab / hydroponics",
+      "category": "Concentration / treatment",
+      "compatible_ia_types": [
+        "Lab experiment"
+      ],
+      "tags": [
+        "hydroponics",
+        "plant growth",
+        "nutrients",
+        "water",
+        "agriculture",
+        "sustainability"
+      ],
+      "default_range": [
+        "0%",
+        "25%",
+        "50%",
+        "75%",
+        "100% recommended concentration"
+      ],
+      "notes": "Feasible with simple containers, seedlings, nutrient solution, and controlled light. Good for root length, shoot height, leaf number, or biomass."
+    },
+    {
+      "name": "Paint color",
+      "topic": "Microclimate / urban heat",
+      "category": "Category / treatment",
+      "compatible_ia_types": [
+        "Lab experiment",
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "temperature",
+        "urban",
+        "surface",
+        "albedo",
+        "microclimate",
+        "light"
+      ],
+      "default_range": [
+        "white",
+        "light grey",
+        "red/brown",
+        "dark grey",
+        "black"
+      ],
+      "notes": "Good for modelling urban heat island effects using surface temperature under sunlight or a lamp."
+    },
+    {
+      "name": "Support for biophilic design feature",
+      "topic": "Survey / urban systems",
+      "category": "Attitude / survey",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "attitudes",
+        "green space",
+        "urban",
+        "wellbeing",
+        "sustainability",
+        "human behavior"
+      ],
+      "default_range": [
+        "natural light",
+        "indoor plants",
+        "green wall",
+        "green roof",
+        "outdoor green space"
+      ],
+      "notes": "Use as a public support or perception survey, not as a vague claim that biophilic design improves wellbeing."
+    },
+    {
+      "name": "Awareness of air pollution problem",
+      "topic": "Survey / air pollution",
+      "category": "Knowledge / awareness",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "air pollution",
+        "knowledge",
+        "attitudes",
+        "green wall",
+        "urban",
+        "policy"
+      ],
+      "default_range": [
+        "very low awareness",
+        "low awareness",
+        "moderate awareness",
+        "high awareness",
+        "very high awareness"
+      ],
+      "notes": "Good for testing whether awareness is linked to support for green walls, pedestrianization, or air pollution strategies."
+    },
+    {
+      "name": "Previous gardening or farming experience",
+      "topic": "Survey / urban farming",
+      "category": "Human experience",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "urban farming",
+        "food systems",
+        "sustainability",
+        "human behavior",
+        "attitudes"
+      ],
+      "default_range": [
+        "none",
+        "rare experience",
+        "some experience",
+        "regular experience",
+        "very frequent experience"
+      ],
+      "notes": "Good for testing whether experience affects support for urban farming or school gardening projects."
+    },
+    {
+      "name": "Access to urban green space",
+      "topic": "Survey / urban systems",
+      "category": "Access / survey",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "green space",
+        "urban",
+        "wellbeing",
+        "human behavior",
+        "sustainability"
+      ],
+      "default_range": [
+        "very poor access",
+        "poor access",
+        "moderate access",
+        "good access",
+        "very good access"
+      ],
+      "notes": "Can be paired with green space use frequency, perceived benefits, or support for green space expansion."
     }
   ],
   "dependent_variables": [
@@ -5273,6 +5690,544 @@
       ],
       "equipment": [
         "online database",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Aquatic macroinvertebrate diversity",
+      "topic": "Water quality / biodiversity",
+      "category": "Biodiversity / water quality",
+      "unit": "Simpson's Diversity Index or species richness",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "biodiversity",
+        "macroinvertebrates",
+        "water pollution",
+        "habitat",
+        "dissolved oxygen"
+      ],
+      "equipment": [
+        "pond net or kick net",
+        "white tray",
+        "identification key",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Aquatic macroinvertebrate abundance",
+      "topic": "Water quality / biodiversity",
+      "category": "Biodiversity / water quality",
+      "unit": "individuals/sample",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "biodiversity",
+        "macroinvertebrates",
+        "abundance",
+        "water pollution",
+        "habitat"
+      ],
+      "equipment": [
+        "pond net or kick net",
+        "white tray",
+        "identification key",
+        "tally counter"
+      ]
+    },
+    {
+      "name": "Plant abundance",
+      "topic": "Plant ecology",
+      "category": "Vegetation",
+      "unit": "individuals/quadrat",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "vegetation",
+        "plant abundance",
+        "biodiversity",
+        "soil",
+        "human disturbance",
+        "habitat"
+      ],
+      "equipment": [
+        "quadrat",
+        "identification guide",
+        "data table"
+      ]
+    },
+    {
+      "name": "Plant population density",
+      "topic": "Plant ecology",
+      "category": "Vegetation",
+      "unit": "individuals/m²",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "vegetation",
+        "population",
+        "density",
+        "biodiversity",
+        "soil",
+        "human disturbance"
+      ],
+      "equipment": [
+        "quadrat",
+        "identification guide",
+        "tape measure"
+      ]
+    },
+    {
+      "name": "Plant percentage frequency",
+      "topic": "Plant ecology",
+      "category": "Vegetation",
+      "unit": "% of quadrats where species is present",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "vegetation",
+        "frequency",
+        "biodiversity",
+        "habitat",
+        "human disturbance"
+      ],
+      "equipment": [
+        "quadrat",
+        "identification guide",
+        "data table"
+      ]
+    },
+    {
+      "name": "Field plant biomass",
+      "topic": "Plant ecology",
+      "category": "Vegetation / biomass",
+      "unit": "g dry mass/m²",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "vegetation",
+        "biomass",
+        "plant growth",
+        "soil",
+        "productivity",
+        "biodiversity"
+      ],
+      "equipment": [
+        "quadrat",
+        "scissors",
+        "paper bags",
+        "drying oven",
+        "balance"
+      ]
+    },
+    {
+      "name": "Leaf litter invertebrate diversity",
+      "topic": "Biodiversity",
+      "category": "Invertebrate biodiversity",
+      "unit": "Simpson's Diversity Index or species richness",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "invertebrates",
+        "leaf litter",
+        "soil",
+        "habitat",
+        "human disturbance"
+      ],
+      "equipment": [
+        "pitfall traps or quadrat",
+        "white tray",
+        "forceps",
+        "identification key"
+      ]
+    },
+    {
+      "name": "Tree and shrub invertebrate diversity",
+      "topic": "Biodiversity",
+      "category": "Invertebrate biodiversity",
+      "unit": "Simpson's Diversity Index or species richness",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "invertebrates",
+        "trees",
+        "shrubs",
+        "vegetation",
+        "habitat"
+      ],
+      "equipment": [
+        "beating tray or white sheet",
+        "stick",
+        "forceps",
+        "identification key"
+      ]
+    },
+    {
+      "name": "Pitfall trap invertebrate abundance",
+      "topic": "Biodiversity",
+      "category": "Invertebrate biodiversity",
+      "unit": "individuals/trap/day",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "biodiversity",
+        "invertebrates",
+        "abundance",
+        "soil",
+        "human disturbance",
+        "habitat"
+      ],
+      "equipment": [
+        "pitfall traps",
+        "covers",
+        "forceps",
+        "identification key"
+      ]
+    },
+    {
+      "name": "Soil nutrient concentration",
+      "topic": "Soil quality",
+      "category": "Soil nutrients",
+      "unit": "mg/kg or test-kit category",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "nutrients",
+        "nitrogen",
+        "phosphorus",
+        "potassium",
+        "agriculture",
+        "plant growth"
+      ],
+      "equipment": [
+        "soil NPK test kit",
+        "soil sample bags",
+        "spatula",
+        "data table"
+      ]
+    },
+    {
+      "name": "Soil nitrogen level",
+      "topic": "Soil quality",
+      "category": "Soil nutrients",
+      "unit": "mg/kg or test-kit category",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "nutrients",
+        "nitrogen",
+        "agriculture",
+        "plant growth"
+      ],
+      "equipment": [
+        "soil nitrogen test kit",
+        "soil sample bags",
+        "data table"
+      ]
+    },
+    {
+      "name": "Soil phosphorus level",
+      "topic": "Soil quality",
+      "category": "Soil nutrients",
+      "unit": "mg/kg or test-kit category",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "nutrients",
+        "phosphorus",
+        "agriculture",
+        "plant growth",
+        "eutrophication"
+      ],
+      "equipment": [
+        "soil phosphorus test kit",
+        "soil sample bags",
+        "data table"
+      ]
+    },
+    {
+      "name": "Soil potassium level",
+      "topic": "Soil quality",
+      "category": "Soil nutrients",
+      "unit": "mg/kg or test-kit category",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "soil",
+        "nutrients",
+        "potassium",
+        "agriculture",
+        "plant growth"
+      ],
+      "equipment": [
+        "soil potassium test kit",
+        "soil sample bags",
+        "data table"
+      ]
+    },
+    {
+      "name": "Biochemical oxygen demand",
+      "topic": "Water quality",
+      "category": "Water quality",
+      "unit": "mg/L",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "water pollution",
+        "BOD",
+        "dissolved oxygen",
+        "organic pollution",
+        "eutrophication"
+      ],
+      "equipment": [
+        "dissolved oxygen probe or test kit",
+        "water sample bottles",
+        "incubator or dark storage"
+      ]
+    },
+    {
+      "name": "Primary productivity",
+      "topic": "Ecosystems",
+      "category": "Productivity",
+      "unit": "mg O₂/L/day, biomass change, or productivity estimate",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Lab experiment"
+      ],
+      "tags": [
+        "productivity",
+        "plant growth",
+        "water",
+        "light",
+        "nutrients",
+        "ecosystem"
+      ],
+      "equipment": [
+        "dissolved oxygen probe or biomass method",
+        "light source or field site",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Stream flow velocity",
+      "topic": "Water quality",
+      "category": "Water physical conditions",
+      "unit": "m/s",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "stream",
+        "flow",
+        "velocity",
+        "habitat",
+        "dissolved oxygen"
+      ],
+      "equipment": [
+        "float",
+        "tape measure",
+        "stopwatch",
+        "flow meter if available"
+      ]
+    },
+    {
+      "name": "Water salinity",
+      "topic": "Water quality",
+      "category": "Water quality",
+      "unit": "ppt, PSU, or mg/L",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "water",
+        "salinity",
+        "pollution",
+        "runoff",
+        "urban",
+        "aquatic ecosystems"
+      ],
+      "equipment": [
+        "CTD sensor or salinity probe",
+        "sample bottles",
+        "data table"
+      ]
+    },
+    {
+      "name": "Slope angle",
+      "topic": "Soil quality / vegetation",
+      "category": "Site physical factor",
+      "unit": "degrees",
+      "compatible_ia_types": [
+        "Primary fieldwork"
+      ],
+      "tags": [
+        "slope",
+        "soil",
+        "runoff",
+        "vegetation",
+        "infiltration",
+        "moisture"
+      ],
+      "equipment": [
+        "clinometer or phone app",
+        "tape measure",
+        "data table"
+      ]
+    },
+    {
+      "name": "Rainfall amount",
+      "topic": "Weather / water / soil",
+      "category": "Weather",
+      "unit": "mm",
+      "compatible_ia_types": [
+        "Primary fieldwork",
+        "Secondary data"
+      ],
+      "tags": [
+        "rainfall",
+        "weather",
+        "soil moisture",
+        "runoff",
+        "turbidity",
+        "water"
+      ],
+      "equipment": [
+        "rain gauge or weather database"
+      ]
+    },
+    {
+      "name": "Support for green walls or green roofs",
+      "topic": "Survey / urban systems",
+      "category": "Survey",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "green wall",
+        "green roof",
+        "urban",
+        "air pollution",
+        "temperature",
+        "attitudes",
+        "policy"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Support for urban farming",
+      "topic": "Survey / food systems",
+      "category": "Survey",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "urban farming",
+        "food systems",
+        "sustainability",
+        "attitudes",
+        "human behavior"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Support for pedestrianized town centers",
+      "topic": "Survey / transport",
+      "category": "Survey",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "transport",
+        "air pollution",
+        "urban",
+        "traffic",
+        "policy",
+        "attitudes"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Perceived wellbeing benefit of green space",
+      "topic": "Survey / urban systems",
+      "category": "Survey",
+      "unit": "Likert score",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "green space",
+        "wellbeing",
+        "urban",
+        "attitudes",
+        "human behavior"
+      ],
+      "equipment": [
+        "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Willingness to pay for urban greening",
+      "topic": "Survey / urban systems",
+      "category": "Survey",
+      "unit": "Likert score or currency amount",
+      "compatible_ia_types": [
+        "Survey"
+      ],
+      "tags": [
+        "survey",
+        "green space",
+        "green wall",
+        "urban",
+        "policy",
+        "attitudes",
+        "sustainability"
+      ],
+      "equipment": [
+        "questionnaire",
         "spreadsheet"
       ]
     }
