@@ -2988,6 +2988,486 @@
         "very good access"
       ],
       "notes": "Can be paired with green space use frequency, perceived benefits, or support for green space expansion."
+    },
+    {
+      "name": "Total population",
+      "topic": "Secondary data / population",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "population",
+        "urban",
+        "resource use",
+        "waste",
+        "water",
+        "energy",
+        "carbon"
+      ],
+      "default_range": [
+        "country-level population data"
+      ],
+      "notes": "Useful for comparing population size with total emissions, total waste, freshwater withdrawal, or energy demand. Per capita variables are often cleaner."
+    },
+    {
+      "name": "Population growth rate",
+      "topic": "Secondary data / population",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "population",
+        "resource use",
+        "urban",
+        "water",
+        "food",
+        "waste"
+      ],
+      "default_range": [
+        "% annual growth"
+      ],
+      "notes": "Better than birth rate or death rate alone for ESS topics about resource demand, urbanization, water stress, or food security."
+    },
+    {
+      "name": "Fertility rate",
+      "topic": "Secondary data / population",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "population",
+        "development",
+        "resource use",
+        "sustainability"
+      ],
+      "default_range": [
+        "births per woman"
+      ],
+      "notes": "Possible IV for development and resource-use investigations, but students must clearly link it to an environmental issue."
+    },
+    {
+      "name": "Birth rate",
+      "topic": "Secondary data / population",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "population",
+        "development",
+        "resource use"
+      ],
+      "default_range": [
+        "births per 1000 people"
+      ],
+      "notes": "Possible but weaker than population growth rate or fertility rate. Best used only with a clear resource-use or sustainability link."
+    },
+    {
+      "name": "Life expectancy",
+      "topic": "Secondary data / development",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "development",
+        "health",
+        "sustainability",
+        "air pollution",
+        "water"
+      ],
+      "default_range": [
+        "years"
+      ],
+      "notes": "Can be used as a development indicator when comparing environmental quality, access to clean energy, pollution, or water stress."
+    },
+    {
+      "name": "Child mortality rate",
+      "topic": "Secondary data / development",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "development",
+        "health",
+        "water",
+        "air pollution",
+        "sustainability"
+      ],
+      "default_range": [
+        "deaths per 1000 live births"
+      ],
+      "notes": "Possible IV or context variable for water access, air pollution, sanitation, or development-related sustainability investigations."
+    },
+    {
+      "name": "Energy use per person",
+      "topic": "Secondary data / energy",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "carbon",
+        "development",
+        "sustainability",
+        "resource use"
+      ],
+      "default_range": [
+        "kWh/person/year or kg oil equivalent/person"
+      ],
+      "notes": "Strong IV for carbon emissions, ecological footprint, development, and energy sustainability investigations."
+    },
+    {
+      "name": "Electricity from fossil fuels percentage",
+      "topic": "Secondary data / energy",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "carbon",
+        "fossil fuels",
+        "air pollution",
+        "climate change"
+      ],
+      "default_range": [
+        "% of electricity generation"
+      ],
+      "notes": "Good for comparing energy structure with CO₂ emissions, air pollution, or renewable energy transitions."
+    },
+    {
+      "name": "Electricity from renewables percentage",
+      "topic": "Secondary data / energy",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "renewable energy",
+        "carbon",
+        "sustainability",
+        "climate change"
+      ],
+      "default_range": [
+        "% of electricity generation"
+      ],
+      "notes": "Good for comparing renewable electricity use with CO₂ emissions, energy access, or development indicators."
+    },
+    {
+      "name": "Electricity from bioenergy percentage",
+      "topic": "Secondary data / energy",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "bioenergy",
+        "renewable energy",
+        "carbon",
+        "land use"
+      ],
+      "default_range": [
+        "% of electricity generation"
+      ],
+      "notes": "Possible IV for energy-transition topics, but students should consider land-use and biomass sustainability issues."
+    },
+    {
+      "name": "Alternative and nuclear energy percentage",
+      "topic": "Secondary data / energy",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "nuclear",
+        "renewable energy",
+        "carbon",
+        "sustainability"
+      ],
+      "default_range": [
+        "% of total energy use"
+      ],
+      "notes": "Good for comparing low-carbon energy share with CO₂ emissions or fossil fuel dependence."
+    },
+    {
+      "name": "Fossil fuel consumption subsidies",
+      "topic": "Secondary data / energy policy",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "fossil fuels",
+        "policy",
+        "carbon",
+        "climate change"
+      ],
+      "default_range": [
+        "USD/year",
+        "USD/person",
+        "% of GDP"
+      ],
+      "notes": "Good for linking energy policy to fossil fuel use, emissions, or renewable energy transition."
+    },
+    {
+      "name": "Gini coefficient",
+      "topic": "Secondary data / inequality",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "inequality",
+        "development",
+        "sustainability",
+        "environmental justice"
+      ],
+      "default_range": [
+        "index value"
+      ],
+      "notes": "Possible IV for environmental justice topics, such as access to clean energy, water stress, pollution exposure, or ecological footprint."
+    },
+    {
+      "name": "Average years of schooling",
+      "topic": "Secondary data / education",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "education",
+        "development",
+        "sustainability",
+        "environmental behavior"
+      ],
+      "default_range": [
+        "years"
+      ],
+      "notes": "Possible IV for sustainability indicators, but students must avoid turning the IA into a purely education/development study."
+    },
+    {
+      "name": "Expected years of schooling",
+      "topic": "Secondary data / education",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "education",
+        "development",
+        "sustainability",
+        "environmental behavior"
+      ],
+      "default_range": [
+        "years"
+      ],
+      "notes": "Possible development IV for environmental behavior, energy access, or sustainability indicators."
+    },
+    {
+      "name": "Literacy rate",
+      "topic": "Secondary data / education",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "education",
+        "development",
+        "sustainability",
+        "environmental behavior"
+      ],
+      "default_range": [
+        "% of population"
+      ],
+      "notes": "Possible but often weaker than education index or years of schooling. Needs a clear ESS link."
+    },
+    {
+      "name": "Nitrogen fertilizer use",
+      "topic": "Secondary data / agriculture",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "agriculture",
+        "fertilizer",
+        "nitrogen",
+        "water pollution",
+        "eutrophication",
+        "soil"
+      ],
+      "default_range": [
+        "kg/ha or tonnes/year"
+      ],
+      "notes": "Strong IV for eutrophication, nitrous oxide emissions, water pollution, or agricultural sustainability topics."
+    },
+    {
+      "name": "Phosphate fertilizer use",
+      "topic": "Secondary data / agriculture",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "agriculture",
+        "fertilizer",
+        "phosphorus",
+        "water pollution",
+        "eutrophication"
+      ],
+      "default_range": [
+        "kg/ha or tonnes/year"
+      ],
+      "notes": "Strong IV for eutrophication, water pollution, and agricultural runoff topics."
+    },
+    {
+      "name": "Meat consumption by type",
+      "topic": "Secondary data / food systems",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "food systems",
+        "meat",
+        "carbon",
+        "land use",
+        "agriculture",
+        "sustainability"
+      ],
+      "default_range": [
+        "kg/person/year by meat type"
+      ],
+      "notes": "Good for comparing diet patterns with agricultural emissions, land use, or ecological footprint."
+    },
+    {
+      "name": "Aquaculture production",
+      "topic": "Secondary data / food systems",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "aquaculture",
+        "fisheries",
+        "food systems",
+        "sustainability",
+        "biodiversity"
+      ],
+      "default_range": [
+        "tonnes/year"
+      ],
+      "notes": "Good for comparing food production systems, fisheries pressure, or sustainable seafood transitions."
+    },
+    {
+      "name": "Capture fishery production",
+      "topic": "Secondary data / fisheries",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "fisheries",
+        "biodiversity",
+        "food systems",
+        "sustainability",
+        "oceans"
+      ],
+      "default_range": [
+        "tonnes/year"
+      ],
+      "notes": "Good for overfishing and marine resource-use investigations."
+    },
+    {
+      "name": "Sustainable fisheries GDP percentage",
+      "topic": "Secondary data / fisheries",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "fisheries",
+        "sustainability",
+        "oceans",
+        "food systems",
+        "development"
+      ],
+      "default_range": [
+        "% of GDP"
+      ],
+      "notes": "Possible IV for marine sustainability or blue economy topics, but students need to understand what the indicator measures."
+    },
+    {
+      "name": "Small-scale fisheries access rights protection",
+      "topic": "Secondary data / fisheries",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "fisheries",
+        "environmental justice",
+        "sustainability",
+        "food systems",
+        "policy"
+      ],
+      "default_range": [
+        "index or score"
+      ],
+      "notes": "Useful for environmental justice and fisheries management topics, but the indicator may be harder for students to explain."
+    },
+    {
+      "name": "Agricultural land with acceptable soil degradation level",
+      "topic": "Secondary data / soil",
+      "category": "Secondary data",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "soil",
+        "agriculture",
+        "land degradation",
+        "sustainability",
+        "food systems"
+      ],
+      "default_range": [
+        "% of agricultural land"
+      ],
+      "notes": "Good for soil degradation, sustainable agriculture, and food security investigations if the dataset is clear."
     }
   ],
   "dependent_variables": [
@@ -6228,6 +6708,582 @@
       ],
       "equipment": [
         "questionnaire",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Annual CO₂ emissions",
+      "topic": "Secondary data / climate",
+      "category": "Secondary data / climate",
+      "unit": "tonnes CO₂/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "carbon",
+        "climate change",
+        "energy",
+        "fossil fuels",
+        "industry"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Annual CO₂ emissions from coal",
+      "topic": "Secondary data / climate",
+      "category": "Secondary data / climate",
+      "unit": "tonnes CO₂/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "carbon",
+        "coal",
+        "fossil fuels",
+        "energy",
+        "climate change",
+        "air pollution"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Per capita CO₂ emissions from coal",
+      "topic": "Secondary data / climate",
+      "category": "Secondary data / climate",
+      "unit": "tonnes CO₂/person/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "carbon",
+        "coal",
+        "fossil fuels",
+        "energy",
+        "climate change"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Annual CO₂ emissions from oil",
+      "topic": "Secondary data / climate",
+      "category": "Secondary data / climate",
+      "unit": "tonnes CO₂/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "carbon",
+        "oil",
+        "fossil fuels",
+        "energy",
+        "transport",
+        "climate change"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Per capita CO₂ emissions from gas",
+      "topic": "Secondary data / climate",
+      "category": "Secondary data / climate",
+      "unit": "tonnes CO₂/person/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "carbon",
+        "natural gas",
+        "fossil fuels",
+        "energy",
+        "climate change"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Per capita CO₂ emissions from transport",
+      "topic": "Secondary data / transport",
+      "category": "Secondary data / climate",
+      "unit": "tonnes CO₂/person/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "transport",
+        "carbon",
+        "air pollution",
+        "urban",
+        "climate change"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Per capita CO₂ emissions from domestic passenger flights",
+      "topic": "Secondary data / transport",
+      "category": "Secondary data / climate",
+      "unit": "tonnes CO₂/person/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "transport",
+        "aviation",
+        "carbon",
+        "climate change",
+        "development"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Greenhouse gas emissions by sector",
+      "topic": "Secondary data / climate",
+      "category": "Secondary data / climate",
+      "unit": "tonnes CO₂e/year or %",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "greenhouse gases",
+        "carbon",
+        "energy",
+        "agriculture",
+        "industry",
+        "climate change"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Nitrous oxide emissions",
+      "topic": "Secondary data / climate",
+      "category": "Secondary data / climate",
+      "unit": "tonnes CO₂e/year or tonnes N₂O/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "nitrous oxide",
+        "greenhouse gases",
+        "agriculture",
+        "fertilizer",
+        "climate change"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Methane emissions",
+      "topic": "Secondary data / climate",
+      "category": "Secondary data / climate",
+      "unit": "tonnes CO₂e/year or tonnes CH₄/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "methane",
+        "greenhouse gases",
+        "agriculture",
+        "food systems",
+        "fossil fuels",
+        "climate change"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "CO₂ emissions by fuel or industry",
+      "topic": "Secondary data / climate",
+      "category": "Secondary data / climate",
+      "unit": "tonnes CO₂/year or %",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "carbon",
+        "industry",
+        "fossil fuels",
+        "energy",
+        "climate change"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Death rate from air pollution",
+      "topic": "Secondary data / air pollution",
+      "category": "Secondary data / environmental health",
+      "unit": "deaths per 100,000 people",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "air pollution",
+        "environmental health",
+        "urban",
+        "PM2.5",
+        "development"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Death rate from indoor air pollution",
+      "topic": "Secondary data / air pollution",
+      "category": "Secondary data / environmental health",
+      "unit": "deaths per 100,000 people",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "air pollution",
+        "indoor air",
+        "energy",
+        "environmental health",
+        "development"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Death rate from lead exposure",
+      "topic": "Secondary data / pollution",
+      "category": "Secondary data / environmental health",
+      "unit": "deaths per 100,000 people",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "pollution",
+        "lead",
+        "environmental health",
+        "development",
+        "toxicity"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Annual PM2.5 emissions from wildfires",
+      "topic": "Secondary data / air pollution",
+      "category": "Secondary data / air pollution",
+      "unit": "tonnes PM2.5/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "air pollution",
+        "PM2.5",
+        "wildfires",
+        "climate change",
+        "forest"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Share of population living in urban areas",
+      "topic": "Secondary data / urban systems",
+      "category": "Secondary data / urban systems",
+      "unit": "%",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "urban",
+        "population",
+        "air pollution",
+        "waste",
+        "energy",
+        "water"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Total fertilizer use",
+      "topic": "Secondary data / agriculture",
+      "category": "Secondary data / agriculture",
+      "unit": "tonnes/year or kg/ha",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "agriculture",
+        "fertilizer",
+        "nutrients",
+        "eutrophication",
+        "water pollution",
+        "soil"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Food waste per capita",
+      "topic": "Secondary data / waste",
+      "category": "Secondary data / waste",
+      "unit": "kg/person/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "waste",
+        "food systems",
+        "sustainability",
+        "resource use",
+        "carbon"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Total municipal solid waste collected",
+      "topic": "Secondary data / waste",
+      "category": "Secondary data / waste",
+      "unit": "tonnes/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "waste",
+        "urban",
+        "population",
+        "sustainability"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Annual deforestation rate",
+      "topic": "Secondary data / forests",
+      "category": "Secondary data / conservation",
+      "unit": "% change/year or hectares/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "forest",
+        "deforestation",
+        "biodiversity",
+        "carbon",
+        "land use",
+        "conservation"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Annual forest area change rate",
+      "topic": "Secondary data / forests",
+      "category": "Secondary data / conservation",
+      "unit": "% change/year or hectares/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "forest",
+        "land use",
+        "deforestation",
+        "reforestation",
+        "carbon",
+        "biodiversity"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Emissions from forests",
+      "topic": "Secondary data / forests",
+      "category": "Secondary data / climate",
+      "unit": "tonnes CO₂e/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "forest",
+        "carbon",
+        "climate change",
+        "land use",
+        "deforestation"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Annual freshwater withdrawals for agriculture",
+      "topic": "Secondary data / water resources",
+      "category": "Secondary data / water",
+      "unit": "m³/year or % of withdrawals",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "water",
+        "agriculture",
+        "water stress",
+        "food systems",
+        "resource use"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Agrifood systems emissions",
+      "topic": "Secondary data / food systems",
+      "category": "Secondary data / climate",
+      "unit": "tonnes CO₂e/year",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "food systems",
+        "agriculture",
+        "carbon",
+        "methane",
+        "nitrous oxide",
+        "climate change"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Prevalence of undernourishment",
+      "topic": "Secondary data / food systems",
+      "category": "Secondary data / food security",
+      "unit": "% of population",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "food systems",
+        "food security",
+        "development",
+        "agriculture",
+        "sustainability"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Level of water stress",
+      "topic": "Secondary data / water resources",
+      "category": "Secondary data / water",
+      "unit": "% freshwater withdrawal as proportion of available freshwater resources",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "water",
+        "water stress",
+        "agriculture",
+        "population",
+        "resource use",
+        "sustainability"
+      ],
+      "equipment": [
+        "online dataset",
+        "spreadsheet"
+      ]
+    },
+    {
+      "name": "Rural access to electricity",
+      "topic": "Secondary data / energy",
+      "category": "Secondary data / energy access",
+      "unit": "% of rural population",
+      "compatible_ia_types": [
+        "Secondary data"
+      ],
+      "tags": [
+        "secondary data",
+        "energy",
+        "development",
+        "sustainability",
+        "environmental justice",
+        "fossil fuels"
+      ],
+      "equipment": [
+        "online dataset",
         "spreadsheet"
       ]
     }
